@@ -14,6 +14,6 @@ pages:
   - 'Recipes':
     - 'Use Web3': 'recipes/use-web3.md'
     - 'Use your own token': 'recipes/own-token.md'
-    - 'Send transfer': 'recipes/send-transfer.md'
+    - 'Transfer tokens': 'recipes/send-transfer.md'
   - 'Advanced':
     - 'Data structures': data-structures.md
