@@ -1,5 +1,5 @@
 ---
-title: Use own token
+title: Use your own token
 ---
 
 1. Go to [bridge-dev.leapdao.org/registerToken](https://bridge-dev.leapdao.org/registerToken/) and register your token address. After registration, you can use your token for deposits and transfers
