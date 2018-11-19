@@ -14,3 +14,5 @@ title: Use own token
         const balance = await contract.methods.getBalance(accountAddr).call();
 
 4. [Send transfers](send-transfer.md)
+
+5. You can see your token transactions in block explorer usign token address. Example: [/explorer/address/0x258DaF43D711831b8FD59137F42030784293e9E6](https://bridge-dev.leapdao.org/explorer/address/0x258DaF43D711831b8FD59137F42030784293e9E6)
