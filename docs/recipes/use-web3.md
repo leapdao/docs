@@ -4,7 +4,7 @@ title: Use Web3
 
 You can use web3.js for communications with `leap-node`. See [JSON RPC docs](../json-rpc/overview.md)
 
-Here is example how to create a Web3 instance:
+Here is an example how to create a Web3 instance:
 
 ```es6
 import Web3 from 'web3';
