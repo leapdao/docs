@@ -39,7 +39,7 @@ title: Send transfer transaction
 
 6. Sign transaction. `leap-core` supports two methods: `sign(privKeys: string[])` and `signWeb3(web3: Web3)`
 
-    - `sign(privKeys: string[])` expects array of private keys as an argument. Length of array should be equal to length of inputs. Also, you can use `signAll` in case in need one key for all inputs
+    - `sign(privKeys: string[])` expects an array of private keys as an argument. Length of the array should be equal to the length of inputs. Also, you can use `signAll` in case you need one key for all inputs
 
             tx.signAll(privateKey);
 
