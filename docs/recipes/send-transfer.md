@@ -1,5 +1,5 @@
 ---
-title: Send transfer transaction
+title: Send a transfer transaction
 ---
 
 1. [Create a web3 instance](use-web3.md)
