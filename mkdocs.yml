@@ -11,5 +11,7 @@ pages:
     - 'web3.eth': json-rpc/web3.eth.md
     - 'web3.net': json-rpc/web3.net.md
     - 'Leap web3 extension': json-rpc/web3.plasma.md
+  - 'Recipes':
+    - 'Use Web3': 'recipes/use-web3.md'
   - 'Advanced':
     - 'Data structures': data-structures.md
