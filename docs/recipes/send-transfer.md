@@ -43,7 +43,7 @@ title: Send transfer transaction
 
             tx.signAll(privateKey);
 
-    - `signWeb3(web3: Web3)` expects web3 instance (MetaMask for example) as an argument
+    - `signWeb3(web3: Web3)` expects a web3 instance (MetaMask for example) as an argument
 
             await tx.signAll(privateKey);
 
