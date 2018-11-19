@@ -13,6 +13,7 @@ pages:
     - 'Leap web3 extension': json-rpc/web3.plasma.md
   - 'Recipes':
     - 'Use Web3': 'recipes/use-web3.md'
+    - 'Use own token': 'recipes/own-token.md'
     - 'Send transfer': 'recipes/send-transfer.md'
   - 'Advanced':
     - 'Data structures': data-structures.md
