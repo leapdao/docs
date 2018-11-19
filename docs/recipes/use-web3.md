@@ -19,7 +19,7 @@ web3.getUnspent(accountAddr).then(utxo => {
   console.log(utxo);
 });
 
-// reads array of registered erc20 tokens
+// reads an array of registered erc20 tokens
 web3.getColors(false).then(erc20Tokens => {
   console.log(erc20Tokens);
 });
