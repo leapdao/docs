@@ -15,4 +15,4 @@ title: Use own token
 
 4. [Send transfers](send-transfer.md)
 
-5. You can see your token transactions in block explorer usign token address. Example: [/explorer/address/0x258DaF43D711831b8FD59137F42030784293e9E6](https://bridge-dev.leapdao.org/explorer/address/0x258DaF43D711831b8FD59137F42030784293e9E6)
+5. You can see your token transactions in a block explorer using the token address. Example: [/explorer/address/0x258DaF43D711831b8FD59137F42030784293e9E6](https://bridge-dev.leapdao.org/explorer/address/0x258DaF43D711831b8FD59137F42030784293e9E6)
