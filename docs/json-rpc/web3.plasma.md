@@ -175,7 +175,7 @@ no parameters
 
 **Returns**
 
-- `Array` - Array of `Object`
+- `Object`
   - `bridgeAddr`: `Address` - address of the bridge contract on the root network
   - `rootNetwork`: `URL` - root network provider
   - `network`: `String` - Leap network name
