@@ -1,5 +1,5 @@
 ---
-title: Connect to testnet
+title: Connect to the testnet
 ---
 
 1. Install `leap-node` package: `npm install leap-node -g`
@@ -22,6 +22,6 @@ title: Connect to testnet
 
 [Block explorer](https://bridge-dev.leapdao.org/explorer)
 
-[Deposit tokens](https://bridge-dev.leapdao.org/deposit)
+[Plasma Wallet](https://bridge-dev.leapdao.org/wallet)
 
-[Health check page](https://health.leapdao.org/)
+[Network status](https://bridge-dev.leapdao.org/status)
