@@ -25,6 +25,18 @@ params: ["0x407d73d8a49eeb85d32cf465507dd71d507100c1"]
 **Example**
 
 Request
+
+```js
+{
+  "method": "plasma_unspent",
+  "params": [
+    "0x407d73d8a49eeb85d32cf465507dd71d507100c1"
+  ],
+  "id": 1,
+  "jsonrpc": "2.0"
+}
+```
+
 ```bash
 curl --data '{"method":"plasma_unspent","params":["0x407d73d8a49eeb85d32cf465507dd71d507100c1"],"id":1,"jsonrpc":"2.0"}' -H "Content-Type: application/json" -X POST localhost:8645
 ```
