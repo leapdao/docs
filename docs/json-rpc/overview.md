@@ -33,6 +33,6 @@ Aside from `DATA` and `QUANTITIES`, there are also normative JSON types, which w
 
 **Full API Documentation**
 
-- [net](web3.net)
-- [eth](web3.eth)
-- [plasma](web3.plasma)
+- [net](web3.net.md)
+- [eth](web3.eth.md)
+- [plasma](web3.plasma.md)
