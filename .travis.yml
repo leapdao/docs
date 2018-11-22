@@ -10,7 +10,11 @@ env:
     - secure: AA9YyBOTiKNxS6Aol2HkGqc6wY829Qrm23iN9cFZ3jL/cDhl68DZBOBD5CFkAvzlHC+exzDqduA94Y32B9yqCRKPJpy4OqlM4oOp5Psgx+86PL3X/IhIyP7UGiCSLb+8esVL/BcVunK4KxuBjaEU4h8ykrNw660iOf4MqsQF6v/pC0ps+9m0uWQkRJ26c3pAZflzgJQ2T+Q7BSSqHCm8czi2eU9idHP5Gjks3Bwf/6ELqGIk9hFrsqVcARtMSTnI0raUyrUFycf9PpbM2ALK0xhGQsE9QoPo09IUJ6SMWbSModCb0QFAVNYjJ9LzHpdZXvk2wDgOsiqDThF758x5aBMMxub3V460GYC7E04pMH4GoX2tpJMA1HJ+Dm2yI1rS9/o0Rk40Os9qViiHykKqCZGJCOsA15v2PUyhOyfsWKKxroqA7dPY4wKjC6m0Ff80c5JWjevwM4dxwbRFg542pnjccT/FQlKyJZY41WzXJGDwYLn0bR8ini7UQdE6f7DcGgsQAYsvncyqDJrg0Jl+7Rbr0mikTPcJ8EvYXY0vGwqi0yMUVvTDGHQGtMsVhEqn9jGtZYwk8k71QPiZ0DOYO7B5zoGv2iHbLg4s7wdjYIx32LauaFYOTyKFoZRH0VAedOVzWGivgEl+jOQ156vygyPrCJFHGHQmAtlBnRwOlJk=
 deploy:
   provider: script
-  script: aws s3 sync site s3://docs.leapdao.org --region=eu-west-1 --acl=public-read 
+  script: aws s3 sync site s3://docs.leapdao.org --region=eu-west-1 --acl=public-read
   skip_cleanup: true
   on:
     branch: master
+
+    after_deploy:
+  - aws configure set preview.cloudfront true
+  - aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION --paths '/*'
