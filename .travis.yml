@@ -1,0 +1,16 @@
+language: python
+install:
+  - pip install mkdocs
+  - pip install awscli
+script:
+  - mkdocs build --verbose --clean --strict
+env:
+  global:
+    - secure: cV5r5w5uAA2nKytO/TOGQzeENeOqdAfe6RyjVdIYio5nY9B8FTXA3YkR7EtzDtxk1ne9om+vyaOOAxQqw7+i/rwOYvCEN29Mk8aYR89aEDRswzhJXnrvmyxMmdCVceQuqJTNNpOjdJlo3HpX1LtIpkegeQ5xi0US56aqzPtyboocoD2FhA49aEFSsVaCqBMJgp+tTnemf+r9atctfVHearDT5Uwl2Galr3WEk9XyMyAwQ3gVwg/yXvfpymJgseG8DNzozXmp3TtMbSQZkpZRg6n8AAeVJHD/rfJx/od8Mmdfj6jTHYu0o5Csgg5BEL0+vn2enG79NYoNVQKVBYtNq03SMRpVIGrK8A7XIpdTiOd7POtdJPApnctkovgHLihr3Dk/FhOuMsN7x//VQHBuqrLhxOkl/3+iWNY48Kvv5Wh+AabkxZ8t/chxjBHm4JtbLyllVSJz5luCxz7S5pTUCy8SJzkHuEg/G7d/xuMkWpp8gXSaD8duI6xH0xi5YyJIO/gnOd7b2V+JbZxYGkFzzTv81NHfd7a3zdHPA4tOXEPw8FEA+3Hfx7ldEZ0z6t5Fey/Zp44flM0C2PctL5q2UKeVag/vliTfuxi0CIpiyIW2rLz0KFJZmS+/jSSQe71Jsbr574sW19VEIR0B2SRhzfNsLY3Z+2UluF8N/vf+K/M=
+    - secure: AA9YyBOTiKNxS6Aol2HkGqc6wY829Qrm23iN9cFZ3jL/cDhl68DZBOBD5CFkAvzlHC+exzDqduA94Y32B9yqCRKPJpy4OqlM4oOp5Psgx+86PL3X/IhIyP7UGiCSLb+8esVL/BcVunK4KxuBjaEU4h8ykrNw660iOf4MqsQF6v/pC0ps+9m0uWQkRJ26c3pAZflzgJQ2T+Q7BSSqHCm8czi2eU9idHP5Gjks3Bwf/6ELqGIk9hFrsqVcARtMSTnI0raUyrUFycf9PpbM2ALK0xhGQsE9QoPo09IUJ6SMWbSModCb0QFAVNYjJ9LzHpdZXvk2wDgOsiqDThF758x5aBMMxub3V460GYC7E04pMH4GoX2tpJMA1HJ+Dm2yI1rS9/o0Rk40Os9qViiHykKqCZGJCOsA15v2PUyhOyfsWKKxroqA7dPY4wKjC6m0Ff80c5JWjevwM4dxwbRFg542pnjccT/FQlKyJZY41WzXJGDwYLn0bR8ini7UQdE6f7DcGgsQAYsvncyqDJrg0Jl+7Rbr0mikTPcJ8EvYXY0vGwqi0yMUVvTDGHQGtMsVhEqn9jGtZYwk8k71QPiZ0DOYO7B5zoGv2iHbLg4s7wdjYIx32LauaFYOTyKFoZRH0VAedOVzWGivgEl+jOQ156vygyPrCJFHGHQmAtlBnRwOlJk=
+deploy:
+  provider: script
+  script: aws s3 sync site s3://docs.leapdao.org --region=eu-west-1 --acl=public-read 
+  skip_cleanup: true
+  on:
+    branch: master
