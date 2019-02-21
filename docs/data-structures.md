@@ -80,28 +80,6 @@ E.g. 314 bytes for 2 inputs and 2 outputs
 | 294    | 20 bytes |  address
 | 314    |
 
-#### Consolidation
-
-167 bytes
-
-| offset |    size  | value      |
-|--------|----------|------------|
-| 0      |  1 byte  | type
-| 1      |  1 byte  | number of inputs
-|        |          | *input 1*
-| 2      | 32 bytes | prev tx          
-| 34     |  1 byte  | output pos        
-| 35     | 32 bytes | r-signature        
-| 67     | 32 bytes | s-signature        
-| 99     |  1 byte  | v-signature         
-|        |          | *input 2*
-| 100    | 32 bytes | prev tx          
-| 132    |  1 byte  | output pos        
-| 133    | 32 bytes | r-signature        
-| 165    | 32 bytes | s-signature        
-| 166    |  1 byte  | v-signature         
-| 167    |
-
 ## Block
  
 ## Period

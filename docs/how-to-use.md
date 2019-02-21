@@ -38,7 +38,7 @@ title: How to use
 
 ### Config presets
 
-Dev config file: `leap-node --network=testnet-beta`
+Dev config file: `leap-node --network=testnet-zeta`
 
 Testnet config file: N/A
 

@@ -203,7 +203,7 @@ Response
     "result": {
         "bridgeAddr": "0x2ac21a06346f075cfa4c59779f85830356ea64f3",
         "rootNetwork": "https://rinkeby.infura.io",
-        "network": "parsec-testnet-alpha",
+        "network": "leapdao-testnet-zeta",
         "genesis": {
             "app_hash": "2436cd126aca5c6ef46b17a041de5b935396224ce9fc2b9cc1f1a60bf52e317e",
             "chain_id": "beta",
@@ -237,7 +237,7 @@ Response
             ]
         },
         "peers": [
-            "bdbd02c690d2b80216ff85946fb0f83945c4f0f2@testnet-2.parseclabs.org:46691"
+            "bdbd02c690d2b80216ff85946fb0f83945c4f0f2@node1.testnet.leapdao.org:46691"
         ]
     }
 }
