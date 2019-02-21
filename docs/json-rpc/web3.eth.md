@@ -55,7 +55,7 @@ params: ["0x407d73d8a49eeb85d32cf465507dd71d507100c1"]
 
 **Returns**
 
-- `Quantity` - integer of the current balance in PSC cents.
+- `Quantity` - numerical string of the current balance.
 
 **Example**
 
@@ -178,7 +178,7 @@ params: ["0xb903239f8543d04b5dc1ba6579132b143087c68db1b2168786408fcbce568238"]
     - `transactionIndex`: `Quantity` - integer of the transactions index position in the block. `null` when its pending.
     - `from`: `Address` - 20 Bytes - address of the sender.
     - `to`: `Address` - 20 Bytes - address of the receiver. Taken from the first output. `null` if there is no outputs.
-    - `value`: `Quantity` - value transferred in PSC cents. Taken from the first output. `null` if there is no outputs.
+    - `value`: `Quantity` - value transferred. Taken from the first output. `null` if there is no outputs.
     - `gasPrice`: `Quantity` - gas price provided by the sender in Wei.
     - `gas`: `Quantity` - gas provided by the sender.
     - `raw`: `Data` - raw transaction data

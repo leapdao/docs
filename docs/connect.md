@@ -8,15 +8,15 @@ title: Connect to the testnet
 
 ## How to become a validator
 
-1. Get some LEAP on the [faucet](https://testnet.leapdao.org/faucet)
-2. Go to [bridge-dev.leapdao.org](https://testnet.leapdao.org/stake)
-3. Grab a slot. You will see your `validator address` and `validator id` in console after the node start
+1. Get some LEAP on the [faucet](https://testnet.leapdao.org/faucet).
+2. Go to [testnet.leapdao.org](https://testnet.leapdao.org/stake).
+3. Grab a slot. You will see your `validator address` and `validator id` in console after the node start.
 
 ## How to register your token
 
-1. Go to [testnet.leapdao.org/registerToken](https://testnet.leapdao.org/registerToken)
-2. Put your token contract address
-3. Execute transaction
+1. Go to [testnet.leapdao.org/registerToken](https://testnet.leapdao.org/registerToken).
+2. Put your token contract address.
+3. Submit Form.
 
 ## Useful links
 
