@@ -15,6 +15,6 @@ deploy:
   on:
     branch: master
 
-    after_deploy:
+after_deploy:
   - aws configure set preview.cloudfront true
   - aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION --paths '/*'
