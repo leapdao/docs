@@ -4,10 +4,10 @@ theme: readthedocs
 nav:
   - 'Home': index.md
   - 'How to use': how-to-use.md
+  - 'Spending Conditions': spending-conditions.md
   - 'Connect to testnet': connect.md
   - 'JSON RPC':
     - 'Overview': json-rpc/overview.md
-    - 'HTTPS support': json-rpc/https.md
     - 'web3.eth': json-rpc/web3.eth.md
     - 'web3.net': json-rpc/web3.net.md
     - 'Leap web3 extension': json-rpc/web3.plasma.md
