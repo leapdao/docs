@@ -2,6 +2,49 @@
 title: How to use
 ---
 
+# Using Docker
+You can use `docker-compose up` in the root folder of the `leap-node` repository for a convienent setup,
+or just `docker run quay.io/leapdao/leap-node` if you want to quickly spin-up a node.
+
+Example docker-compose.yml file:
+```
+version: '3'
+
+services:
+  leap-node:
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: quay.io/leapdao/leap-node:latest
+    volumes:
+      - leap-node:/root
+    ports:
+      # rpc
+      - "8645:8645"
+      # ws
+      - "8646:8646"
+      # proxy_app
+      - "26659:26659"
+      # p2p
+      - "46691:46691"
+    environment:
+      - "DEBUG=${DEBUG}"
+    stdin_open: true
+    tty: true
+    deploy:
+      replicas: 1
+      resources:
+        limits:
+          memory: 2048M
+        reservations:
+          memory: 512M
+
+volumes:
+  leap-node:
+```
+
+# Without Docker
 ## Prerequisite
 
 - Node.js 8+
