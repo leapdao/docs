@@ -9,6 +9,7 @@ or just `docker run quay.io/leapdao/leap-node` if you want to quickly spin-up a 
 Example commands:
   - `docker run quay.io/leapdao/leap-node leap-node --help`
   - `docker run -t -e DEBUG=* -p 1000:1000 quay.io/leapdao/leap-node leap-node --rpcport=1000 --config=https://testnet-node1.leapdao.org/`
+  - `DEBUG='leap*' docker-compose up` (needs docker-compose.yml)
 
 Example docker-compose.yml file:
 ```
