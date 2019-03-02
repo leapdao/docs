@@ -3,7 +3,7 @@ title: Connect to the testnet
 ---
 
 1. Install `leap-node` package: `npm install leap-node -g`
-2. Connect to testnet: `leap-node --config=http://node1.testnet.leapdao.org`
+2. Connect to testnet: `leap-node --config=http://node1.testnet.leapdao.org:8645`
 3. (Optional) become a validator
 
 ## How to become a validator
