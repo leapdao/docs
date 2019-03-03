@@ -7,9 +7,12 @@ You can use `docker-compose up` in the root folder of the `leap-node` repository
 or just `docker run quay.io/leapdao/leap-node` if you want to quickly spin-up a node.
 
 Example commands:
-  - `docker run quay.io/leapdao/leap-node leap-node --help`
-  - `docker run -t -e DEBUG=* -p 1000:1000 quay.io/leapdao/leap-node leap-node --rpcport=1000 --config=http://node1.testnet.leapdao.org:8645`
+  - `docker run quay.io/leapdao/leap-node --help`
+  - `docker run -t -e DEBUG=* -p 1000:1000 quay.io/leapdao/leap-node --rpcport=1000 --config=http://node1.testnet.leapdao.org:8645`
+  - `docker run -it --entrypoint sh quay.io/leapdao/leap-node` Overwrite `ENTRYPOINT` to `sh`, creates a container and drops into a shell.
   - `DEBUG='leap*' docker-compose up` (needs docker-compose.yml)
+  - `docker-compose run --entrypoint sh leap-node` Overwrite `ENTRYPOINT` to `sh`, creates a container and drops into a shell.
+  - `docker-compose exec leap-node sh` Drops into a shell in the running leap-node container.
 
 Example docker-compose.yml file:
 ```
