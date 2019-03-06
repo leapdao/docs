@@ -8,6 +8,7 @@ You can use `docker-compose up` in the root folder of the `leap-node` repository
 or just `docker run quay.io/leapdao/leap-node` if you want to quickly spin-up a node.
 
 Example commands:
+
 - `docker run quay.io/leapdao/leap-node --help`
 - `docker run -t -e DEBUG=* -e 'NETWORK=mainnet' -e 'RPC_PORT=1000' -e 'P2P_PORT=1010' -p 1000:1000 -p 1010:1010 quay.io/leapdao/leap-node`
 - `docker run -t -e DEBUG=* -e 'CONFIG_URL=http://node1.testnet.leapdao.org:8645' -e 'RPC_PORT=1000' -p 1000:1000 quay.io/leapdao/leap-node`
