@@ -49,4 +49,4 @@ title: Send a transfer transaction
 
 7. Send transaction
 
-        await web3.eth.sendSignedTransaction(tx.toRaw())
+        await web3.eth.sendSignedTransaction(tx.hex())
