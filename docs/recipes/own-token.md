@@ -2,7 +2,7 @@
 title: Use your own token
 ---
 
-1. Go to [bridge-dev.leapdao.org/registerToken](https://testnet.leapdao.org/registerToken/) and register your token address. After registration, you can use your token for deposits and transfers
+1. Go to [testnet.leapdao.org/registerToken](https://testnet.leapdao.org/registerToken/) and register your token address. After registration, you can use your token for deposits and transfers
 
 2. Read your token color (using [extended web3](use-web3.md))
 
