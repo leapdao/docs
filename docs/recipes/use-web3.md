@@ -10,7 +10,7 @@ Here is an example how to create a Web3 instance:
 import Web3 from 'web3';
 import { helpers } from 'leap-core';
 
-const web3 = helpers.extendWeb3(new Web3('http://node1.testnet.leapdao.org'));
+const web3 = helpers.extendWeb3(new Web3('https://testnet-node.leapdao.org'));
 
 // Now you can use leap-specific methods
 

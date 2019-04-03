@@ -11,7 +11,7 @@ Example commands:
 
 - `docker run quay.io/leapdao/leap-node --help`
 - `docker run -t -e DEBUG=* -e 'NETWORK=mainnet' -e 'RPC_PORT=1000' -e 'P2P_PORT=1010' -p 1000:1000 -p 1010:1010 quay.io/leapdao/leap-node`
-- `docker run -t -e DEBUG=* -e 'CONFIG_URL=http://node1.testnet.leapdao.org:8645' -e 'RPC_PORT=1000' -p 1000:1000 quay.io/leapdao/leap-node`
+- `docker run -t -e DEBUG=* -e 'CONFIG_URL=https://testnet-node.leapdao.org' -e 'RPC_PORT=1000' -p 1000:1000 quay.io/leapdao/leap-node`
 - `docker run -it --entrypoint sh quay.io/leapdao/leap-node` - Overwrite `ENTRYPOINT` to `sh`, creates a container and drops into a shell.
 - `DEBUG='leap*' NETWORK=testnet docker-compose up` - (needs docker-compose.yml)
 - `docker-compose run --entrypoint sh leap-node` - Overwrite `ENTRYPOINT` to `sh`, creates a container and drops into a shell.

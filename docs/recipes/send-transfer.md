@@ -7,7 +7,7 @@ title: Send a transfer transaction
         import Web3 from 'web3';
         import { Tx, helpers } from 'leap-core';
 
-        const web3 = helpers.extendWeb3(new Web3('https://node1.testnet.leapdao.org'));
+        const web3 = helpers.extendWeb3(new Web3('https://testnet-node.leapdao.org'));
 
 2. Read UTXOs list
 
@@ -49,4 +49,4 @@ title: Send a transfer transaction
 
 7. Send transaction
 
-        await web3.eth.sendSignedTransaction(tx.toRaw())
+        await web3.eth.sendSignedTransaction(tx.hex())
