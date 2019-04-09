@@ -31,7 +31,7 @@ In this part, we would take a look at an example spending condition and compile 
 
 #### Deployment
 
-We will use a command-line script located at `tools/hashLockCondition.js` to deploy our condition and interact with it. The source code of the script can be found [here](
+We will use a command-line script located at `tools/hashLockCondition.js` in `spending-conditions` repository to deploy our condition and interact with it. The source code of the script can be found [here](
  https://github.com/leapdao/spending-conditions/blob/master/tools/hashLockCondition.js).
 
 The script takes two arguments. `hashLockCondition <token address> <message sender address>` which would replace `spenderAddr` abd `tokenAddr` hardcoded in our Spending Condition. To deploy the script simply:
