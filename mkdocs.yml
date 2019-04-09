@@ -5,6 +5,7 @@ nav:
   - 'Home': index.md
   - 'How to use': how-to-use.md
   - 'Spending Conditions': spending-conditions.md
+  - 'Deploying Spending Conditions': spending-tutorial.md
   - 'Connect to testnet': connect.md
   - 'JSON RPC':
     - 'Overview': json-rpc/overview.md
