@@ -4,7 +4,7 @@ title: Spending Conditions Tutorial
 
 # Overwiew
 
-During the course of this short tutorial, we would deploy a Spending Condition to a LeapDAO testnet. It would allow you to replace steps presented in this instructional [video](https://www.youtube.com/embed/cB5T0buF8GI).
+During the course of this short tutorial, we would deploy a Spending Condition to a LeapDAO testnet. It would allow you to retrace steps presented in this instructional [video](https://www.youtube.com/embed/cB5T0buF8GI).
 
 In the course of the tutorial you will need:
 
