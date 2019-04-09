@@ -8,14 +8,14 @@ During the course of this short tutorial, we would deploy a Spending Condition t
 
 In the course of the tutorial you will need:
 
-- (Optional) Twitter Account to get tokens.
+- (Optional) Twitter account to get tokens.
 - Metamask to hold tokens and sign transactions.
 - Truffle or other way of compiling solidity code.
 - Node.js to launch deployment script.
 
 #### Getting LEAP tokens on testnet.
 
-If you already have some  LEAP tokens, feel free to skip this step.
+If you already have some LEAP tokens, feel free to skip this step.
 
 1. Go to the [faucet](https://testnet.leapdao.org/faucet) page. You will need to have access to a twitter account for the next step.
 2. As instructed on the faucet page, publish a Tweet containing your **Ethereum address** and mention of **@leapDAO**.
@@ -25,8 +25,8 @@ If you already have some  LEAP tokens, feel free to skip this step.
 #### Spending Condition
 In this part, we would take a look at an example spending condition and compile it.
 
-1. Download, or clone `spending-conditions` repository from [here](https://github.com/leapdao/spending-conditions/blob/master/tools/hashLockCondition.js). Solidity source code for the spending condition that we will interact with is located in `/Contracts/SpendingCondition.sol`.
-2. Build the contract. Easiest way is to use `truffle compile` in root folder of the downloaded repository assuming you have [Truffle](https://truffleframework.com/) installed. Look here(https://truffleframework.com/docs/truffle/getting-started/installation) for notes on installing truffle framework.
+1. Download `spending-conditions` [repository](https://github.com/leapdao/spending-conditions) or clone it from command line via `git clone https://github.com/leapdao/spending-conditions`. Solidity source code for the spending condition that we will interact with is located in `/Contracts/HashLockCondition.sol`.
+2. Build the contract. Easiest way is to use `truffle compile` in root folder of the downloaded repository assuming you have [Truffle](https://truffleframework.com/) installed. Look [here](https://truffleframework.com/docs/truffle/getting-started/installation) for notes on installing truffle framework.
 
 
 #### Deployment
