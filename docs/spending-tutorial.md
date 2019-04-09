@@ -19,7 +19,7 @@ If you already have some LEAP tokens, feel free to skip this step.
 
 1. Go to the [faucet](https://testnet.leapdao.org/faucet) page. You will need to have access to a twitter account for the next step.
 2. As instructed on the faucet page, publish a Tweet containing your **Ethereum address** and mention of **@leapDAO**.
-3. Insert URL to your tweet on the faucet page request tokens and go to [Wallet](https://testnet.leapdao.org/wallet) page.
+3. Insert URL to your tweet on the faucet page, request tokens and go to [Wallet](https://testnet.leapdao.org/wallet) page.
 4. Connect metamask on Rinkeby network.
 
 #### Spending Condition
