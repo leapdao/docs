@@ -2,7 +2,7 @@
 title: Spending Conditions Tutorial
 ---
 
-# Overwiew
+# Overview
 
 During the course of this short tutorial, we would deploy a [Spending Condition](https://docs.leapdao.org/spending-conditions/) to a LeapDAO testnet. It would allow you to retrace steps presented in this instructional [video](https://www.youtube.com/embed/cB5T0buF8GI).
 
@@ -34,17 +34,17 @@ In this part, we would take a look at an example spending condition and compile 
 We will use a command-line script located at `tools/hashLockCondition.js` in `spending-conditions` repository to deploy our condition and interact with it. The source code of the script can be found [here](
  https://github.com/leapdao/spending-conditions/blob/master/tools/hashLockCondition.js).
 
-The script takes two arguments. `hashLockCondition <token address> <message sender address>` which would replace `spenderAddr` abd `tokenAddr` hardcoded in our Spending Condition. To deploy the script simply:
+The script takes two arguments. `hashLockCondition <token address> <message sender address>` which would replace `spenderAddr` and `tokenAddr` hardcoded in our Spending Condition. To deploy the script simply:
 
 1. (Optional) You can set `RPC_URL` environmental variable like so `RPC_URL=https://testnet-node1.leapdao.org` to ensure your spending condition would be deployed to LeapDAO testnet. If `RPC_URL` is not set, the script should be pointed at LeapDAO testnet by default.
-2. Execute the `tools/hashLockCondition.js` script. As first argument paste *Token contract address* displayed on your [wallet](https://testnet.leapdao.org/wallet) page. As second argument use your address displayed on wallet page as *My address*. The script will keep printing `Calling: plasma_unspent [<condition address>]` untill it recieves transaction that we will sign in the next step.
+2. Execute the `tools/hashLockCondition.js` script. As first argument paste *Token contract address* displayed on your [wallet](https://testnet.leapdao.org/wallet) page. As second argument use your address displayed on wallet page as *My address*. The script will keep printing `Calling: plasma_unspent [<condition address>]` untill it receives transaction that we will sign in the next step.
 3. Go to your leapDAO [wallet](https://testnet.leapdao.org/wallet) page and transfer some amount of LEAP tokens to the address that appears on your command line. You will need to sign transaction using Metamask browser plugin.
 
 #### Verification
 
-Once the spending condition has recieved your funds, you will see some raw input printed on command line and script will gracefully exit. The final step is to verify if script has indeed submitted both the spening condition and transaction to the LeapDAO testnet:
+Once the spending condition has received your funds, you will see some raw input printed on command line and script will gracefully exit. The final step is to verify if script has indeed submitted both the spending condition and transaction to the LeapDAO testnet:
 
-1. Once deployed spending condition recieves transaction we signed in *deployment* step, raw transaction data would be printed to command line.
+1. Once deployed spending condition receives transaction we signed in *deployment* step, raw transaction data would be printed to command line.
 2. In order to see what happened once your transaction was submitted to testnet copy the hash following the string `transaction hash:` and paste it into LeapDAO block [explorer](https://testnet.leapdao.org/explorer).
 
 If spending condition has succeeded (as it should in our example, assuming valid `<token address>` and `<message sender address>` were passed as arguments to the script) block explorer will show a page containing details of the transaction that was submitted.
