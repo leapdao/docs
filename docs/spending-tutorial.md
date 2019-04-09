@@ -26,7 +26,7 @@ If you already have some  LEAP tokens, feel free to skip this step.
 In this part, we would take a look at an example spending condition and compile it.
 
 1. Download, or clone `spending-conditions` repository from [here](https://github.com/leapdao/spending-conditions/blob/master/tools/hashLockCondition.js). Solidity source code for the spending condition that we will interact with is located in `/Contracts/SpendingCondition.sol`.
-2. Build the contract. Easiest way is to use `truffle compile` in root folder of the downloaded repository assuming you have [Truffle](https://truffleframework.com/) installed.
+2. Build the contract. Easiest way is to use `truffle compile` in root folder of the downloaded repository assuming you have [Truffle](https://truffleframework.com/) installed. Look here(https://truffleframework.com/docs/truffle/getting-started/installation) for notes on installing truffle framework.
 
 
 #### Deployment
@@ -38,5 +38,5 @@ The script takes two arguments. `hashLockCondition <token address> <message send
 
 1. Execute the `tools/hashLockCondition.js` script. As first argument paste *Token contract address* displayed on your [wallet](https://testnet.leapdao.org/wallet) page. As second argument use your address displayed on wallet page as *My address*.
 
-2. (Optional) You can set `RPC-URL` environmental variable to select network on which condition would be deployed. By default, if `RPC-URL` is not set, script will publish condition on LeapDAO testnet.
-3. Go to your LEAP [wallet](https://testnet.leapdao.org/wallet) page and transfer tokens to the address that appears on your command line. You will need to sign transaction using your MetaMask.
+2. (Optional) You can set `RPC-URL` environmental variable like so `RPC_URL=https://testnet-node1.leapdao.org` to ensure your spending condition would be deployed to LeapDAO testnet. The script should be pointed at LeapDAO testnet by default.
+3. Go to your LEAP [wallet](https://testnet.leapdao.org/wallet) page and transfer tokens to the address that appears on your command line. You will need to sign transaction using MetaMask.
