@@ -4,7 +4,7 @@ title: Spending Conditions Tutorial
 
 # Overview
 
-During the course of this short tutorial, we would deploy a [Spending Condition](https://docs.leapdao.org/spending-conditions/) to a LeapDAO testnet. It would allow you to retrace steps presented in this instructional [video](https://www.youtube.com/embed/cB5T0buF8GI).
+During the course of this short tutorial, we would deploy a [Spending Condition](https://docs.leapdao.org/spending-conditions/) to a LeapDAO testnet. Spending condition is a special type of smart contract which runs on Plasma instead of being deployed to main Ethereum chain. Unlike traditional smart contract, output of spending condition should depend only on its input and condition itself should not affect arbitrary state. Following this tutorial would allow you to retrace steps presented in instructional [video](https://www.youtube.com/embed/cB5T0buF8GI).
 
 In the course of the tutorial you will need:
 
@@ -28,6 +28,7 @@ In this part, we would take a look at an example spending condition and compile 
 1. Download `spending-conditions` [repository](https://github.com/leapdao/spending-conditions) or clone it from command line via `git clone https://github.com/leapdao/spending-conditions`. Solidity source code for the spending condition that we will interact with is located in `/Contracts/HashLockCondition.sol`.
 2. Build the contract. Easiest way is to use `truffle compile` in root folder of the downloaded repository assuming you have [truffle](https://truffleframework.com/) installed. Look [here](https://truffleframework.com/docs/truffle/getting-started/installation) for notes on installing truffle framework.
 
+The HashLockCondition we are working with locks money under a hash. Anyone knowing the pre-image of the hash is able to send a transaction and claim the funds. Hashlock conditions can be used to escrow the trade between entities and are base technologies that enable payments and state channels, like the bitcoin lightning network and the ethereum raiden.
 
 #### Deployment
 
@@ -50,3 +51,5 @@ Once the spending condition has received your funds, you will see some raw input
 If spending condition has succeeded (as it should in our example, assuming valid `<token address>` and `<message sender address>` were passed as arguments to the script) block explorer will show a page containing details of the transaction that was submitted.
 
 If wrong argument (such as `<token address>` which does not exist on the blockchain) was passed to the script, then explorer would be unable to show transaction details and indicate this with message `No results found for your search`.
+
+Spending Conditions, like the one which we just deployed, allow the execution of smart contracts on Plasma. Thanks to moving transactions off main Ethereum chain and into the second layer we can build faster and cheaper Dapps that are not viable on the Ethereum mainnet. With Spending Conditions on Plasma we extend the capabilities of Ethereum in terms of performance and usability beyond Platforms like EOS or TRON.
