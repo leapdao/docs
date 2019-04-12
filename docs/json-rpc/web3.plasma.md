@@ -242,3 +242,65 @@ Response
     }
 }
 ```
+
+# plasma_getUnsignedTransferTx
+
+Return a tranfer transaction without signature.
+
+**Parameters**
+
+- `from` - 20 Bytes - address from which token will be transfered.
+- `to` - 20 Bytes - address token will be transfered to.
+- `color` - `Number` - token id.
+- `value` - `Number` - number of token to be transfered
+
+```js
+params: ["0xb8205608d54cb81f44f263be086027d8610f3c94", "0xd56f7dfcd2baffbc1d885f0266b21c7f2912020c", 1, 260]
+```
+
+**Returns**
+
+- `Transaction` - generated transfer transaction without signature
+
+**Example**
+
+Request
+```js
+{
+  "method": "plasma_getUnsignedTransferTx",
+  "params": ["0xb8205608d54cb81f44f263be086027d8610f3c94", "0xd56f7dfcd2baffbc1d885f0266b21c7f2912020c", 1, 260],
+  "id": 1,
+  "jsonrpc": "2.0"
+}
+```
+```bash
+curl --data '{"method":"plasma_getUnsignedTransferTx","params":["0xb8205608d54cb81f44f263be086027d8610f3c94", "0xd56f7dfcd2baffbc1d885f0266b21c7f2912020c", 1, 260],"id":1,"jsonrpc":"2.0"}' -H "Content-Type: application/json" -X POST localhost:8645
+```
+Response
+```js
+{
+  "id": 1,
+  "jsonrpc": "2.0",
+  "result": { type: 3,
+        hash:
+         '0xb31b4b333120c4d844c1b5bee0a74b4661f542120a067b756edeb4ebea23b80c',
+        inputs:
+         [ { hash:
+              '0xdcef54659fb1fbaac37f8ff76b9d66fe197c6b67351ecf4d9fcfd2321f1dd1d6',
+             index: 2 },
+           { hash:
+              '0xdcef54659fb1fbaac37f8ff76b9d66fe197c6b67351ecf4d9fcfd2321f1dd1d6',
+             index: 1 }
+         ],
+        outputs:
+         [ { address: '0xd56f7dfcd2baffbc1d885f0266b21c7f2912020c',
+             value: '260',
+             color: 1 },
+           { address: '0xb8205608d54cb81f44f263be086027d8610f3c94',
+             value: '40',
+             color: 1 }
+         ]
+    }
+
+}
+```
