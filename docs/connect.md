@@ -15,7 +15,7 @@ title: Connect to the testnet
 * It should have tendermint P2P port reachable by other nodes.
 * It doesn’t expose tendermint RPC port to public internet.
 * Ideally you will need to have additional failover node with the same validator key running in readonly mode. So you can make updates to the machine and software without downtime. For more information, [see here.](https://github.com/leapdao/leap-node/issues/185#issuecomment-468921734)
-4. Locate you validator keys. These are two: Ethereum address and tendermint key. Look in the logs or in the node files to find them.
+4. Locate your validator keys. These are two: Ethereum address and tendermint key. Look in the logs or in the node files to find them.
 5. Make sure you validator Ethereum address has some ether on it. It will be needed to submit periods to the root chain.
 6. LeapDAO might ask you to provide an output of some tendermint RPC call, so we can make sure your node is well connected to other peers and synced up with the network.
 7. Share you validator keys and the node key (`cat ~/.lotion/networks/<network name>/config/node_key.json` or grep logs for `ID_` string) with LeapDAO.
