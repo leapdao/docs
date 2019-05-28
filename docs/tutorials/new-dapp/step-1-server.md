@@ -1,4 +1,4 @@
-Setup Server
+Scaffold server
 ---  
 Let's create a new folder and name it, for example, **leap-word-game**:
 
@@ -59,6 +59,68 @@ const corser = require("corser");
 
 // Then activate it after app.set('view engine', 'jade');
 app.use(corser.create());
+```
+
+Tools
+---
+In order to use wallet on server side we will need to have one and get some funds into it.
+Let's create folder `tools` and put `generateWallet.js` file into it:
+```javascript
+const ethers = require('ethers/index');
+const clipboardy = require('clipboardy/index');
+
+async function main() {
+  let wallet = ethers.Wallet.createRandom();
+  clipboardy.writeSync(wallet.mnemonic);
+  console.log("Mnemonic:", wallet.mnemonic);
+  console.log("We also wrote put in your clipboard. You welcome :)");
+}
+
+main();
+```
+
+Open terminal inside `server` folder and run:
+```bash
+node tools/generateWallet
+```
+
+Script will create new mnemonic, output it to screen and also put it into your clipboard.
+Create new `.env` file in the root of `server` folder and put contents of your clipboard after `WALLET_MNEMONIC` variable:
+
+```dotenv
+WALLET_MNEMONIC="PUT_GENERATED_MNEMONIC_HERE"
+```
+
+***
+***Security Note:*** *Don't ever put your .evn file in repository as it contains crucial information, which can be used to
+transfer ALL your wallet funds without your knowledge. Keep this somewhere safe. You will be able to setup this variables
+later, when you deploy your server*
+
+***
+We will add another tool to transfer tokens from one account to another at later stage.
+
+Config
+---
+Create new file `config.js` that will be used to provide token address, RPC url and wallet mnemonic for our server.
+In this tutorial we gonna use LEAP token.
+```javascript
+const dotenv = require("dotenv");
+dotenv.config();
+
+//const RPC_URL = "https://testnet-node1.leapdao.org"; // Testnet RPC
+//const TOKEN_ADDRESS = "0xD2D0F8a6ADfF16C2098101087f9548465EC96C98"; // Testnet LEAP
+
+const RPC_URL = "https://staging-testnet.leapdao.org/rpc"; // Staging RPC
+const TOKEN_ADDRESS = "0x0666eBbF26CDE07EA79FeCAe15e5f18394EBC149"; // Staging LEAP
+
+// Get WALLET_MNEMONI from .env file
+const { WALLET_MNEMONIC } = process.env;
+
+module.exports = {
+  RPC_URL,
+  TOKEN_ADDRESS,
+  WALLET_MNEMONIC,
+};
 ```
 
 Next step we will create our smart contract - which we would further refer as "spending condition" - and compile it.
