@@ -18,3 +18,8 @@ nav:
     - 'Transfer tokens': 'recipes/send-transfer.md'
   - 'Advanced':
     - 'Data structures': data-structures.md
+  - 'Create New Leap DApp':
+      - 'Introduction':   'tutorials/new-dapp/intro.md'
+      - 'Init Server': 'tutorials/new-dapp/step-1-server.md'
+      - 'Create Game Contract': 'tutorials/new-dapp/step-2-contract.md'
+
