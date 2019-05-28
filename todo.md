@@ -7,7 +7,9 @@ TODO
 - Make script to test transfer
 - Make script to emulate real game
 - Scaffold front-end interface
-- Fetch new round and round
+- Activate wallet and get account address
+- Fetch new round data
+- Create new round, fund it and send round address back to client
 - Sign round transaction with Metamask
 - Create spending condition on server, sign it and send it
 - Send back hash of the recipe to frontend
