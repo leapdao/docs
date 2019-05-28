@@ -6,6 +6,12 @@ TODO
 - Implement utility method to make transfer
 - Make script to test transfer
 - Make script to emulate real game
+- Scaffold front-end interface
+- Fetch new round and round
+- Sign round transaction with Metamask
+- Create spending condition on server, sign it and send it
+- Send back hash of the recipe to frontend
+- Fetch recipe and show result
 
 DONE
 ---
