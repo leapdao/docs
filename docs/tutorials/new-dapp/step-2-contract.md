@@ -51,7 +51,7 @@ function roundResult(bytes32 _playerAnswer, bytes32 _roundId) public {
 }
 ```
 
-Full listing of contract, sans comment, you can find below:
+Full listing of contract - sans comments -  you can find below:
 ```solidity
 pragma solidity ^0.5.2;
 import "openzeppelin-solidity/contracts/token/ERC20/IERC20.sol";
