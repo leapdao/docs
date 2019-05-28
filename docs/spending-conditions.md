@@ -8,7 +8,7 @@ With these transaction types Bitcoin locks funds into programmable conditions. T
 
 Programmable conditions can be created with EVM bytecode, and the use of such conditions to govern the spending of funds gives them their name - "spending conditions". Spending conditions are smart-contract-like scripts. Yet, unlike smart contract spending conditions shall not affect arbitrary state. This would make the [exit game for any spending condition unfeasible](https://ethresear.ch/t/why-smart-contracts-are-not-feasible-on-plasma/2598). Rather, the output of spending conditions execution should not be affected by storage or other transfers. The inputs and outputs of the transaction holding the spending condition are the only permitted side effects.
 
-You can find an [example for a spending condition](https://github.com/leapdao/spending-conditions/blob/master/contracts/mocks/SpendingCondition.sol) in [our repositories](https://github.com/leapdao).
+Spending condition example: [SpendingCondition.sol](https://github.com/leapdao/spending-conditions/blob/master/contracts/SpendingCondition.sol)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/cB5T0buF8GI"
 style="margin-bottom: 20px" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
