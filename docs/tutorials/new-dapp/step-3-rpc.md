@@ -1,6 +1,6 @@
 General Info
 ---
-We will interact with Leap node via remote procedure call (RPC) protocol. You can read in details about it [here](../../../json-rpc/overview/)
+We will interact with Leap node via remote procedure call (RPC) protocol. You can read in details about it [here.](../../../json-rpc/overview/)
 There are several methods we will use in this tutorial:
 - **plasma_getColor** - get integer id of token  
 - **plasma_unspent** - get token balance  
