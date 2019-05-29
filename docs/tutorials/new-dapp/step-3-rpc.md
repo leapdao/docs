@@ -188,3 +188,62 @@ async tokenBalanceChange(options){
 };
 ```
 
+Integration test
+---
+Now let's try this in real life.
+Create new folder with name `integration` inside `server/test`. 
+Add new file `getBalance.js` and import required modules:
+```javascript
+const ethers = require('ethers');
+const leapCore = require('leap-core');
+const RPC = require('../../../universal/rpc');
+const { RPC_URL, TOKEN_ADDRESS } = require('../../../universal/config');
+```
+
+Remember we've compiled IERC20 together with our contract? Now it's time to use it.  
+Add following lines to the file:
+```javascript
+// Load ERC20 interface
+let IERC20;
+try {
+  IERC20 = require("../../build/contracts/IERC20");
+} catch (e) {
+  console.error(`Please run "truffle compile" first`);
+  return;
+}
+const erc20Abi = IERC20.abi;
+
+// We call JSON RPC provider plasma to distinguish it from other web3 providers
+const plasma = new ethers.providers.JsonRpcProvider(RPC_URL);
+
+// Now create instance of RPC client
+const rpcClient = new RPC({ plasma, erc20Abi, ethers, leapCore});
+
+const main = async ()=>{
+  // getTokenColor is one of the generic calls that should work
+  const tokenColor = await rpcClient.getTokenColor(TOKEN_ADDRESS);
+  
+  // Create getter method for balance
+  const balanceOf = await rpcClient.getBalance(TOKEN_ADDRESS);
+  
+  // Let's use some random address from https://staging.leapdao.org/explorer
+  const balance = await balanceOf('0x4436373705394267350db2c06613990d34621d69');
+  
+  // Now let's output data we've got
+  console.log({tokenColor, balance: balance.toString()});
+};
+
+main();
+```
+
+And try to run it:
+```bash
+node test/integration/getBalance.js
+```
+
+Output should be similar to this:
+```json
+{ tokenColor: 0, balance: '100000000000000' }
+```
+
+Our RPC class works as intended, let's start implementing our game.
