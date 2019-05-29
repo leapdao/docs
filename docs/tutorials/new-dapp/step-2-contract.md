@@ -31,8 +31,9 @@ contract WordGame {
 }
 ```
 
-For the sake of simplicity our contract will have a single method **roundResult**, which will process player answer and 
-transfer funds according to it.
+For the sake of simplicity our contract will have two methods:
+- **roundResult** which will process player answer and transfer funds according to it
+- **cancelRound** will simply return balance of the contract back to house wallet  
 ```solidity
 function roundResult(bytes32 _playerAnswer, bytes32 _roundId) public {
 	// Check that player is trying to unlock funds for correct answer 
@@ -49,54 +50,20 @@ function roundResult(bytes32 _playerAnswer, bytes32 _roundId) public {
 		token.transfer(HOUSE, balance);
 	}
 }
-```
 
-Full listing of contract - sans comments -  you can find below:
-```solidity
-pragma solidity ^0.5.2;
-import "openzeppelin-solidity/contracts/token/ERC20/IERC20.sol";
-
-contract WordGame {
-	bytes32 constant ROUND_ID = 0x1337133713371337133713371337133713371337133713371337133713371337;
-	bytes32 constant ANSWER = 0x1234123412341234123412341234123412341234123412341234123412341234;
-	address constant TOKEN_ADDR = 0x1222222222222222222222222222222222222222;
-	address constant PLAYER = 0x1333333333333333333333333333333333333333;
-	address constant HOUSE = 0x1444444444444444444444444444444444444444;
-
-	function roundResult(bytes32 _playerAnswer, bytes32 _roundId) public {
-		require(_roundId == ROUND_ID, "wrong round ID");
-		IERC20 token = IERC20(TOKEN_ADDR);
-		uint balance = token.balanceOf(address(this));
-
-		if (_playerAnswer == ANSWER) {
-			token.transfer(PLAYER, balance);
-		} else {
-			token.transfer(HOUSE, balance);
-		}
-	}
-
-	function cancel() public {
-		IERC20 token = IERC20(TOKEN_ADDR);
-		uint balance = token.balanceOf(address(this));
-		token.transfer(HOUSE, balance);
-	}
+function cancelRound() public {
+	IERC20 token = IERC20(TOKEN_ADDR);
+	uint balance = token.balanceOf(address(this));
+	token.transfer(HOUSE, balance);
 }
 ```
 
 Compile Contract
 ---
-First of all you will need to add some minor changes to `truffle-config.js` file. Open the file in your editor,
-scroll to `compilers` section, uncomment version line and set it to 0.5.2 (same as we are using in contracts)
-```json
-  compilers: {
-    solc: {
-       version: "0.5.2",
-       ...    
-```
-
-Now we need to compile our contract. Open terminal inside of your server folder and call:
+Open terminal inside of your `server` folder and call:
 ```bash
 truffle compile
 ```
-This will create a new folder "build" with three files in it - `IERC20.json`, `Migrations.json` and `WordGame.json`  
+This will create a new folder "build/contract" with three files in it - `IERC20.json`, `Migrations.json` and `WordGame.json`.
+In next section we will use `IERC20.json` to get toke balance and later `WordGame.json` to deploy spending condition.   
 
