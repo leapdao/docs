@@ -3,6 +3,8 @@ Create ABIs
 Inside `client/src` create new folder `abis` and make 3 files inside of it `erc20.js`, `wordGame.js` and `index.js`
 You can grab contents for `erc20.js` and `wordGame.js` from JSON artefacts in `server/build/contracts` folder 
 (look for corresponding file and copy value of "abi"field) or copy-paste from here:  
+> Files are also available in GitHub repository [erc20.js](https://github.com/MaxStalker/leap-word-game/blob/master/client/src/abis/erc20.js) and
+[wordGame.js](https://github.com/MaxStalker/leap-word-game/blob/master/client/src/abis/wordGame.js)
 ```javascript
 const erc20Abi = [
   {
@@ -476,6 +478,7 @@ wordsButtons.forEach(wordButton => {
   });
 });
 ```
+> [Full listing of index.js](https://github.com/MaxStalker/leap-word-game/blob/master/client/src/index.js)
 
 Congratulations!
 ---
