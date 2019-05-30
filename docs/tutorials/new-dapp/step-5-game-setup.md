@@ -156,10 +156,6 @@ const finishRound = async (
   // Get access to data we got at the end of generateNewRound 
   const { codeBuffer, roundId, roundAddress } = round; 
 
-  // House params
-  const houseAddress = houseWallet.address;
-  const housePrivateKey = houseWallet.privateKey;
-
   // Token Color
   const tokenColor = await getTokenColor(tokenAddress);
   const tokenContract = await getTokenContract(tokenAddress);
@@ -168,6 +164,8 @@ const finishRound = async (
 
 At this point of time player will fund round from his side and now it's time to do the same for hous
 ```javascript
+const houseAddress = houseWallet.address;
+const housePrivateKey = houseWallet.privateKey;
 
 // Make new transaction from houseAddress to roundAddress
 const houseTransaction = await makeTransfer(
@@ -197,9 +195,9 @@ showLog({
 ```
 
 At this point of time our round address shall have 3 unspent outputs:  
-- first one is gas funding
-- second one - player bet  
-- third one - house bet  
+	- *first one is gas funding*  
+	- *second one - player bet*  
+	- *third one - house bet*  
 
 We will create spending conditions out of those 3 
 ```javascript
