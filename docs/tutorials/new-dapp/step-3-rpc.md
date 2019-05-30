@@ -1,7 +1,13 @@
 General Info
 ---
-We will interact with Leap node via remote procedure call (RPC) protocol. You can read in details about it [here.](../../../json-rpc/overview/)
-There are several methods we will use in this tutorial:
+We will interact with Leap node via remote procedure call (RPC) protocol. 
+You can read in details about it [here.](../../../json-rpc/overview/)  
+
+___
+TODO: Add inner links for each method
+___
+
+There are several methods we will use in this tutorial:  
 - **plasma_getColor** - get integer id of token  
 - **plasma_unspent** - get token balance  
 - **eth_sendRawTransaction** - send raw transaction to register on chain  
@@ -40,7 +46,14 @@ Create new file in `universal` folder in root of your project and call it `rpc.j
 
 ```javascript
 const { rpcMessages } = require('./config');
-const { GET_COLOR, GET_TX, GET_UNSPENT, RAW_TX } = rpcMessages;
+const {
+  GET_COLOR,
+  GET_TX,
+  GET_UNSPENT,
+  RAW_TX,
+  CHECK_CONDITION,
+  GET_RECEIPT
+} = rpcMessages;
 
 class RPC{
   constructor({erc20Abi, leapCore, ethers, plasma}){
@@ -188,18 +201,32 @@ async tokenBalanceChange(options){
 };
 ```
 
-Integration test
+Let's add some more proxy methods that will be helpful later
+```javascript
+  async checkCondition(condition) {
+    const { plasma } = this;
+    return await plasma.send(CHECK_CONDITION, [condition.hex()]);
+  }
+  async sendRaw(tx) {
+    const { plasma } = this;
+    return await plasma.send(RAW_TX, [tx.hex()]);
+  }
+  async getReceipt(hash) {
+    const { plasma } = this;
+    return await plasma.send(GET_RECEIPT, [hash]);
+  }
+```
+
+RPC Client
 ---
-Now let's try this in real life.
-Create new folder with name `integration` inside `server/test`. 
-Add new file `getBalance.js` and import required modules:
+Create new file in the root of `server` folder and call it `rpcClient.js`.  
+Require necessary modules first
 ```javascript
 const ethers = require('ethers');
 const leapCore = require('leap-core');
 const RPC = require('../../../universal/rpc');
 const { RPC_URL, TOKEN_ADDRESS } = require('../../../universal/config');
 ```
-
 Remember we've compiled IERC20 together with our contract? Now it's time to use it.  
 Add following lines to the file:
 ```javascript
@@ -219,6 +246,18 @@ const plasma = new ethers.providers.JsonRpcProvider(RPC_URL);
 // Now create instance of RPC client
 const rpcClient = new RPC({ plasma, erc20Abi, ethers, leapCore});
 
+// And export it for later use
+module.exports = rpcClient;
+```
+
+Integration test
+---
+Now let's try this in real life.
+Create new folder with name `integration` inside `server/test`.   
+Make new file `getBalance.js` inside of it.
+
+```javascript
+const rpcClient = require('../../rpcClient.js')
 const main = async ()=>{
   // getTokenColor is one of the generic calls that should work
   const tokenColor = await rpcClient.getTokenColor(TOKEN_ADDRESS);
