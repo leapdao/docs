@@ -28,4 +28,5 @@ nav:
       - 'Mock Game Execution': 'tutorials/new-dapp/step-6-game-mock.md'
       - 'Finish Server': 'tutorials/new-dapp/step-7-finish-server.md'
       - 'Client Setup': 'tutorials/new-dapp/step-8-client-setup.md'
-
+      - 'Client Game': 'tutorials/new-dapp/step-9-client-game.md'
+      - 'Final - Source Code': 'tutorials/new-dapp/step-10-final.md'
