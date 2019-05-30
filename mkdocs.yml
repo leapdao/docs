@@ -22,5 +22,7 @@ nav:
       - 'Introduction':   'tutorials/new-dapp/intro.md'
       - 'Setup Server': 'tutorials/new-dapp/step-1-server.md'
       - 'Create Game Contract': 'tutorials/new-dapp/step-2-contract.md'
-      - 'RPC Utility methods': 'tutorials/new-dapp/step-3-rpc.md'
+      - 'RPC Utility Methods': 'tutorials/new-dapp/step-3-rpc.md'
+      - 'Generic Utility Methods': 'tutorials/new-dapp/step-4-generic-utility.md'
+      - 'Game Methods': 'tutorials/new-dapp/step-5-game.md'
 
