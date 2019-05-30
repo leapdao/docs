@@ -74,8 +74,12 @@ class RPC{
     this.getTokenContract = this.getTokenContract.bind(this);
     this.getBalance = this.getBalance.bind(this);
     this.getTransaction = this.getTransaction.bind(this);
+    this.getUnspentOutputs = this.getUnspentOutputs.bind(this);
     this.makeTransfer = this.makeTransfer.bind(this);
     this.tokenBalanceChange = this.tokenBalanceChange.bind(this);
+    this.checkCondition = this.checkCondition.bind(this);
+    this.sendRaw = this.sendRaw.bind(this);
+    this.getReceipt = this.getReceipt.bind(this);
   }
 }
 ```
