@@ -236,8 +236,8 @@ Require necessary modules first
 ```javascript
 const ethers = require('ethers');
 const leapCore = require('leap-core');
-const RPC = require('../../../universal/rpc');
-const { RPC_URL, TOKEN_ADDRESS } = require('../../../universal/config');
+const RPC = require('../universal/rpc');
+const { RPC_URL, TOKEN_ADDRESS } = require('../universal/config');
 ```
 Remember we've compiled IERC20 together with our contract? Now it's time to use it.  
 Add following lines to the file:
@@ -245,7 +245,7 @@ Add following lines to the file:
 // Load ERC20 interface
 let IERC20;
 try {
-  IERC20 = require("../../build/contracts/IERC20");
+  IERC20 = require("./build/contracts/IERC20");
 } catch (e) {
   console.error(`Please run "truffle compile" first`);
   return;
