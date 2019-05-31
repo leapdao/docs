@@ -81,8 +81,11 @@ class RPC{
     this.sendRaw = this.sendRaw.bind(this);
     this.getReceipt = this.getReceipt.bind(this);
   }
+  
+  // PUT IMPLEMENTATION OF METHODS HERE
 }
 ```
+Now let's implement those methods.  
 
 **getTokenColor** method will return integer id for token address
 ```javascript
@@ -221,6 +224,11 @@ Let's add some more proxy methods that will be helpful later
   }
 ```
 
+Don't forget to export our class so it can be references from other modules
+```javascript
+module.exports = RPC;
+```
+
 RPC Client
 ---
 Create new file in the root of `server` folder and call it `rpcClient.js`.  
@@ -261,7 +269,9 @@ Create new folder with name `integration` inside `server/test`.
 Make new file `getBalance.js` inside of it.
 
 ```javascript
-const rpcClient = require('../../rpcClient.js')
+const rpcClient = require('../../rpcClient');
+const { TOKEN_ADDRESS } = require('../../../universal/config');
+
 const main = async ()=>{
   // getTokenColor is one of the generic calls that should work
   const tokenColor = await rpcClient.getTokenColor(TOKEN_ADDRESS);
