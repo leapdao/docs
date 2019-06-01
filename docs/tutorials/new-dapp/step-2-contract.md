@@ -4,13 +4,14 @@ Spending conditions are scripts providing the ability to apply specific rules an
 You can get more details in [previous sections of this documentation](../../spending-conditions.md)  
 
 Create new Solidity file inside `server/contracts` folder and call it `WordGame.sol`.  
-Setup your pragma line and import IERC20 interface from openzeppelin library:
+Open this file in your code editor. 
+Setup your pragma and import IERC20 interface from openzeppelin library:
 ```solidity
-pragma solidity ^0.5.2;
+pragma solidity ^0.5.0;
 import "openzeppelin-solidity/contracts/token/ERC20/IERC20.sol";
 ```
 
-Now let's define our contract and some constants we will use later
+Then define contract and some constants we will use later
 ```solidity
 contract WordGame {
 	// Here we will define several constants that we replace at later stage
@@ -57,6 +58,7 @@ function cancelRound() public {
 	token.transfer(HOUSE, balance);
 }
 ```
+> Full listing [WodGame.sol](https://github.com/MaxStalker/leap-word-game/blob/master/server/contracts/WordGame.sol) 
 
 Compile Contract
 ---
