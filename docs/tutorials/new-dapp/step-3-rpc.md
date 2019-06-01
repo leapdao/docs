@@ -3,19 +3,15 @@ General Info
 We will interact with Leap node via remote procedure call (RPC) protocol. 
 You can read in details about it [here.](../../../json-rpc/overview/)  
 
-___
-TODO: Add inner links for each method
-___
-
 There are several methods we will use in this tutorial:  
-- **plasma_getColor** - get integer id of token  
-- **plasma_unspent** - get token balance  
-- **eth_sendRawTransaction** - send raw transaction to register on chain  
-- **eth_getTransactionByHash** - get transaction by hash  
-- **eth_getTransactionReceipt** - get transaction receipt  
+- [**plasma_getColor**](../../../json-rpc/web3.plasma/#plasma_getcolor) - get integer id of token  
+- [**plasma_unspent**](../../../json-rpc/web3.plasma/##plasma_unspent) - get token balance  
+- [**eth_sendRawTransaction**](../../../json-rpc/web3.eth/#eth_sendrawtransaction) - send raw transaction to register on chain  
+- [**eth_getTransactionByHash**](../../../json-rpc/web3.eth/#eth_gettransactionbyhash_) - get transaction by hash  
+- [**eth_getTransactionReceipt**](../../../json-rpc/web3.eth/#eth_gettransactionreceipt) - get transaction receipt  
 - **checkSpendingCondition** - check spending condition for errors  
 
-Let's add those as constants to our `universal/config.js` file and update it's module exports
+Let's add those as constants to our `universal/config.js` file on *line 3*
 ```javascript
 // RPC Calls
 const GET_COLOR = "plasma_getColor";
