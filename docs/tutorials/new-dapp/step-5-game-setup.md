@@ -63,17 +63,18 @@ const generateNewRound = async (
   // Token Color
   const tokenColor = await getTokenColor(tokenAddress);
   const tokenContract = await getTokenContract(tokenAddress);
+  
+  // PUT THE REST OF THE CODE HERE
 };
 ```
 Next prepare round data
+
 ```javascript
 // We gonna use timestamp for a nounce
 const time = new Date().getTime().toString();
 // And store it inside contract in bytes32 form
 const roundId = utils.formatBytes32String(time);
-```
 
-```javascript
 // Generate a set of words for new round
 const words = getWords({ exactly: 4, maxLength: 8 });
 // Pick one
@@ -135,8 +136,11 @@ return {
   codeBuffer
 };
 ```
+> *Full listing of [generateNewRound](https://github.com/MaxStalker/leap-word-game/blob/e2a35e0ab071a54c01d0230c65611757bf90eb98/server/game/index.js#L22)*
+
 Finish Round
 ---
+Implement code to finish round
 ```javascript
 const finishRound = async (
   { word, houseWallet, tokenAddress, round, roundBet }
@@ -162,7 +166,7 @@ const finishRound = async (
   const roundBalance = await getBalance(tokenAddress)(roundAddress);
 ```
 
-At this point of time player will fund round from his side and now it's time to do the same for hous
+At this point of time player will fund round from his side and now it's time to do the same for house
 ```javascript
 const houseAddress = houseWallet.address;
 const housePrivateKey = houseWallet.privateKey;
@@ -257,6 +261,14 @@ const checkUnlockingScriptNew = await checkCondition(unlockTransaction);
 showLog(checkUnlockingScriptNew, "New Check");
 const finalHash = await sendRaw(unlockTransaction);
 return { receiptHash: finalHash, roundBalance: newRoundBalance };
+};
+```
+
+Don't forget to export those 2 methods for later use:
+```javascript
+module.exports = {
+  generateNewRound,
+  finishRound
 };
 ```
 
