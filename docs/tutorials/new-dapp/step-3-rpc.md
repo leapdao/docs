@@ -20,7 +20,9 @@ const RAW_TX = "eth_sendRawTransaction";
 const GET_TX = "eth_getTransactionByHash";
 const GET_RECEIPT = "eth_getTransactionReceipt";
 const CHECK_CONDITION = "checkSpendingCondition";
-
+```
+And then update it's module exports
+```javascript
 module.exports = {
   RPC_URL,
   TOKEN_ADDRESS,
@@ -213,24 +215,26 @@ async tokenBalanceChange(options){
 
 Let's add some more proxy methods that will be helpful later
 ```javascript
-  async checkCondition(condition) {
-    const { plasma } = this;
-    return await plasma.send(CHECK_CONDITION, [condition.hex()]);
-  }
-  async sendRaw(tx) {
-    const { plasma } = this;
-    return await plasma.send(RAW_TX, [tx.hex()]);
-  }
-  async getReceipt(hash) {
-    const { plasma } = this;
-    return await plasma.send(GET_RECEIPT, [hash]);
-  }
+async checkCondition(condition) {
+  const { plasma } = this;
+  return await plasma.send(CHECK_CONDITION, [condition.hex()]);
+}
+async sendRaw(tx) {
+  const { plasma } = this;
+  return await plasma.send(RAW_TX, [tx.hex()]);
+}
+async getReceipt(hash) {
+  const { plasma } = this;
+  return await plasma.send(GET_RECEIPT, [hash]);
+}
 ```
 
-Don't forget to export our class so it can be references from other modules
+Don't forget to export our class so it can be references from other modules. At the end of the file add
 ```javascript
 module.exports = RPC;
 ```
+
+> *Full listing for [RPC class](https://github.com/MaxStalker/leap-word-game/blob/master/universal/rpc.js)*
 
 RPC Client
 ---
