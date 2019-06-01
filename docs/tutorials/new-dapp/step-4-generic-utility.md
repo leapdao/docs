@@ -38,9 +38,7 @@ module.exports = {
 
 Faucet
 ---
-Create new file `faucet.js` and put following code that will send request to faucet
-> *Please note, there is no financial advantage in generating multiple addresses to stash LEAP on staging. 
-If you deplete faucet you will simply create a burden for other developers like you. Be polite!*
+Inside the same `server/utils` folder create new file `faucet.js` and put following code that will send request to faucet
 ```javascript
 const got = require("got");
 
@@ -68,5 +66,7 @@ async function requestFaucet(address, color) {
 
 module.exports = requestFaucet;
 ```
+> *Please note, there is no financial advantage in generating multiple addresses to stash LEAP on staging. 
+If you deplete faucet you will simply create a burden for other developers like you. Be polite!*
 
 
