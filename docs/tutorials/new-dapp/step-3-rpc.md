@@ -189,12 +189,19 @@ async tokenBalanceChange(options){
   }
 
   let i = 0;
-  const logger = process && process.stdout ? process.stdout : console.log;
   do {
     i++;
     await new Promise(resolve => setInterval(resolve, 1000));
     currentBalance = (await contract.balanceOf(address)).toString();
-    showProgress && logger(`\r   🕐 Waiting for balance change. Seconds passed: ${i}`);
+    if (showProgress) {
+      if (process && process.stdout) {
+        process.stdout.write(
+          `\r   🕐 Waiting for balance change. Seconds passed: ${i}`
+        );
+      } else {
+        console.log(`🕐 Waiting for balance change. Seconds passed: ${i}`);
+      }
+    }
   } while (currentBalance === tempBalance && i < maxTries);
 
   const formattedBalance = currentBalance.toString();
