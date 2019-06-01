@@ -46,15 +46,20 @@ npm install -dev clipboardy openzeppelin-solidity
 npm install -g truffle nodemon
 ```
 
-Init truffle part (agree to install inside non-empty folder). This will create two folders "contracts" and "migrations"
+> *If you on Windows and encounter and errors during the process, try to install
+[windows-build-tools module](https://www.npmjs.com/package/windows-build-tools)* then run `npm install` again
+
+Ensure that your terminal is currently inside server folder and  then init truffle part (agree to install inside non-empty folder). This will create two folders "contracts" and "migrations"
 ```bash
 truffle init
 ```
+Reply with "y" when Truffle will say that folder is not empty and aks if you want to continue.
 
-Let's spin up server to ensure that it's working
+After that try to spin up server
 ```bash
 nodemon start
 ```
+
 You can access index page at [http://localhost:3000](http://localhost:3000)
 
 Add corser
@@ -74,7 +79,7 @@ Tools
 To use wallet on server side we will need to have one and get some funds into it.
 You can [skip this step](#set-environment-variables)
 
-Let's create folder `tools` and put `generateWallet.js` file into it:
+Let's create folder `tools` in the root of `server` and put `generateWallet.js` file into it:
 ```javascript
 const ethers = require('ethers/index');
 const clipboardy = require('clipboardy/index');
