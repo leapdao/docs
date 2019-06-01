@@ -109,7 +109,20 @@ transfer ALL your wallet funds without your knowledge. Keep this somewhere safe.
 later, when you deploy your server*
 
 ***
-We will add another tool to transfer tokens from one account to another at later stage.
+
+Create new file inside root of `server` folder and call it `config.js`. We will use it read values from our `.env` file in a convenient way
+```javascript
+const dotenv = require("dotenv");
+dotenv.config();
+
+// Get WALLET_MNEMONI from .env file
+const { WALLET_MNEMONIC } = process.env;
+
+module.exports = {
+  WALLET_MNEMONIC,
+};
+```
+
 
 Config
 ---
