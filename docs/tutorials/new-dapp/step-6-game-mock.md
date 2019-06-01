@@ -16,8 +16,7 @@ module.exports = {
 
 Now run `node tools/generateWallet.js` and after execution of script is finished, paste clipboard contents inside of quotes on **line 4** of `mnemonics.js` file.
 
-Then create another file `gameMock.js`
-Import necessary modules:
+Then create another file `gameMock.js` in the same folder. Start by importing necessary modules:
 ```javascript
 // Ethers will be used to control wallets
 const ethers = require("ethers");
@@ -86,13 +85,15 @@ async function main() {
 	// Now let's check if any of them have zero balance and request faucet in that case
   await checkBalances(balanceOf, { playerAddress, houseAddress });
 
+	// Put the rest of the code here
+
   process.exit(0);
 }
 
 main();
 ```
 
-Now generate new round data. Add following to line 58 (before process.exit(0))
+Now generate new round data. Add following instead of commented out line, before process.exit(0))
 ```javascript
 const roundBet = 100000000;
 const round = await generateNewRound({
@@ -133,7 +134,7 @@ INITIAL BALANCES
 ---------------
 
    🕐 Waiting for balance change. Seconds passed: 2
-   ✅ Balance changed: 5890000
+   ✅ Balance changed: 6000000
 
 ---------------
 
@@ -144,14 +145,17 @@ ROUND GENERATED
   roundId:
    '0x3135353932303833373731353200000000000000000000000000000000000000',
   roundAddress: '0x615c3ae02381421c8bc3715def3bebfcc1cd8e37',
-  roundBalance: '5890000' }
+  roundBalance: '6000000' }
 
 ---------------
 ```
 
+Now let's transfer funds from player address
 
 ```javascript
 const { makeTransfer, tokenBalanceChange } = rpcClient;
+
+// Make the transfer
 const playerTransfer = await makeTransfer(
   {
     from: playerAddress,
@@ -162,11 +166,13 @@ const playerTransfer = await makeTransfer(
   }
 );
 
+// Wait for balance change on roundAddress
 const roundBalanceAfterPlayer = await tokenBalanceChange({
   contract: tokenContract,
   address: roundAddress
 });
 
+// Log result
 showLog({
   roundBalance,
   roundBalanceAfterPlayer
@@ -186,14 +192,14 @@ In the end of the output you shall see the following, indicating that roundAddre
 ROUND BALANCE CHANGE
 
 { roundBalance: '6000000',
-  roundBalanceAfterPlayer: '105890000'
+  roundBalanceAfterPlayer: '106000000'
   }
 
 ---------------
 
 ```
 
-Now finish the round by adding the code to **line 103** and executing `node test/integration/gameMock.js` one more time:
+Now finish the round by adding the code from below and then executing `node test/integration/gameMock.js` one more time:
 ```javascript
 const roundEnd = await finishRound({
     word: answer,
