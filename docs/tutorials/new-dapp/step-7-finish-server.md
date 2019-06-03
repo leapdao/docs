@@ -6,14 +6,14 @@ const ethers = require('ethers');
 const { WALLET_MNEMONIC } = require('./config');
 
 // Here we would simply restore wallet from mnemonic phrase
-const wallet = new ethers.Wallet.fromMnemonic(HOUSE_MNEMONIC);
+const wallet = new ethers.Wallet.fromMnemonic(WALLET_MNEMONIC);
 
 module.exports = wallet;
 ```
 
 Route and Endpoints
 ---
-Open `app.js` in the root of `server` folder. Delete userRouter on line 9 and
+Open `app.js` in the root of `server` folder. Delete userRouter on line 8 and
 add new game router there:
 ```javascript
 var gameRouter = require('./routes/wordGame');
@@ -104,6 +104,11 @@ router.post("/finishRound", async (req, res) => {
   // - roundBalance
   res.status(200).send(roundStatus);
 });
+```
+
+Don't forget to export router, otherwise you will get an error:
+```javascript
+module.exports = router;
 ```
 
 Test with Postman
