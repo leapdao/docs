@@ -249,20 +249,3 @@ wordsButtons.forEach(wordButton => {
 });
 ```
 > [Full listing of index.js](https://github.com/MaxStalker/leap-word-game/blob/master/client/src/index.js)
-
-Run the game
----
-Now start the server by running in the `server` folder: 
-```javascript
-nodemon start
-```
-Execute following script in `client` folder:
-```javascript
-npm start
-```
-
-Congratulations!
----
-Now you should have dApp working on Leap network.  
-We haven't covered cancelRound functionality, since you can do it in different ways. 
-But it should be trivial if you simply follow the code we wrote to resolve round.
