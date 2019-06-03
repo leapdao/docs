@@ -1,236 +1,3 @@
-Create ABIs
----
-Inside `client/src` create new folder `abis` and make 3 files inside of it `erc20.js`, `wordGame.js` and `index.js`
-You can grab contents for `erc20.js` and `wordGame.js` from JSON artefacts in `server/build/contracts` folder 
-(look for corresponding file and copy value of "abi"field) or copy-paste from here:  
-> Files are also available in GitHub repository [erc20.js](https://github.com/MaxStalker/leap-word-game/blob/master/client/src/abis/erc20.js) and
-[wordGame.js](https://github.com/MaxStalker/leap-word-game/blob/master/client/src/abis/wordGame.js)
-```javascript
-const erc20Abi = [
-  {
-    "anonymous": false,
-    "inputs": [
-      {
-        "indexed": true,
-        "name": "from",
-        "type": "address"
-      },
-      {
-        "indexed": true,
-        "name": "to",
-        "type": "address"
-      },
-      {
-        "indexed": false,
-        "name": "value",
-        "type": "uint256"
-      }
-    ],
-    "name": "Transfer",
-    "type": "event"
-  },
-  {
-    "anonymous": false,
-    "inputs": [
-      {
-        "indexed": true,
-        "name": "owner",
-        "type": "address"
-      },
-      {
-        "indexed": true,
-        "name": "spender",
-        "type": "address"
-      },
-      {
-        "indexed": false,
-        "name": "value",
-        "type": "uint256"
-      }
-    ],
-    "name": "Approval",
-    "type": "event"
-  },
-  {
-    "constant": true,
-    "inputs": [],
-    "name": "totalSupply",
-    "outputs": [
-      {
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [
-      {
-        "name": "account",
-        "type": "address"
-      }
-    ],
-    "name": "balanceOf",
-    "outputs": [
-      {
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": false,
-    "inputs": [
-      {
-        "name": "recipient",
-        "type": "address"
-      },
-      {
-        "name": "amount",
-        "type": "uint256"
-      }
-    ],
-    "name": "transfer",
-    "outputs": [
-      {
-        "name": "",
-        "type": "bool"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [
-      {
-        "name": "owner",
-        "type": "address"
-      },
-      {
-        "name": "spender",
-        "type": "address"
-      }
-    ],
-    "name": "allowance",
-    "outputs": [
-      {
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": false,
-    "inputs": [
-      {
-        "name": "spender",
-        "type": "address"
-      },
-      {
-        "name": "amount",
-        "type": "uint256"
-      }
-    ],
-    "name": "approve",
-    "outputs": [
-      {
-        "name": "",
-        "type": "bool"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "constant": false,
-    "inputs": [
-      {
-        "name": "sender",
-        "type": "address"
-      },
-      {
-        "name": "recipient",
-        "type": "address"
-      },
-      {
-        "name": "amount",
-        "type": "uint256"
-      }
-    ],
-    "name": "transferFrom",
-    "outputs": [
-      {
-        "name": "",
-        "type": "bool"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "nonpayable",
-    "type": "function"
-  }
-]
-export default erc20Abi;
-```
-```javascript
-const wordGameAbi = [
-  {
-    "constant": false,
-    "inputs": [
-      {
-        "name": "_playerAnswer",
-        "type": "bytes32"
-      },
-      {
-        "name": "_roundId",
-        "type": "bytes32"
-      }
-    ],
-    "name": "roundResult",
-    "outputs": [],
-    "payable": false,
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "constant": false,
-    "inputs": [],
-    "name": "cancelRound",
-    "outputs": [],
-    "payable": false,
-    "stateMutability": "nonpayable",
-    "type": "function"
-  }
-];
-export default wordGameAbi;
-```
-Now export those from `index.js`
-```javascript
-export { default as erc20Abi } from "./erc20";
-export { default as wordGameAbi } from "./wordGame";
-```
-
-Create Wallet instance
----
-Add new file `wallet.js` inside `client/src`. We will export instance of web3 wallet
-```javascript
-import Web3 from "web3";
-const wallet = window.ethereum ? new Web3(window.ethereum) : null;
-
-export default wallet;
-```
-
 Game Interaction
 ---
 Here we will cover the process of creating game flow and interaction with server
@@ -319,15 +86,18 @@ Next will be *main* method, which will be executed, when all content on the page
 ```javascript
 const main = async () => {
   console.log("Start Application");
-  // Here we will continue implementing our logic
-  };
+  
+  // PUT YOUR CODE HERE
+  
+};
 
 // Wait for content to be loaded
 document.addEventListener("DOMContentLoaded", () => {
   main();
 });
 ```
-After that 'Start Application' let's add some code to grab DOM elements
+let's add some code to grab DOM elements. Inside the body of **main** function replace commented out line 
+with following code:
 ```javascript
 const allStepsDOM = document.querySelectorAll(".step");
 const allSteps = [].slice.call(allStepsDOM);
@@ -480,8 +250,19 @@ wordsButtons.forEach(wordButton => {
 ```
 > [Full listing of index.js](https://github.com/MaxStalker/leap-word-game/blob/master/client/src/index.js)
 
+Run the game
+---
+Now start the server by running in the `server` folder: 
+```javascript
+nodemon start
+```
+Execute following script in `client` folder:
+```javascript
+npm start
+```
+
 Congratulations!
 ---
-Now you should have a working dApp working on Leap network.  
+Now you should have dApp working on Leap network.  
 We haven't covered cancelRound functionality, since you can do it in different ways. 
 But it should be trivial if you simply follow the code we wrote to resolve round.
