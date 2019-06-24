@@ -40,7 +40,7 @@ module.exports = {
 RPC Class
 ---
 In order to smooth interaction with RPC let's create utility class `RPC` and implement some methods on it.
-Create new file in `universal` folder in root of your project and call it `rpc.js`
+Create new file in the `universal` folder at the root of your project and call it `rpc.js`
 
 ```javascript
 const { rpcMessages } = require('./config');
@@ -118,7 +118,7 @@ getTokenContract(tokenAddress){
 ```javascript
 getBalance(tokenAddress){
   const { plasma } = this;
-  const { getTokenContract } =this;
+  const { getTokenContract } = this;
   return async function(address) {
     const contract = getTokenContract(tokenAddress, plasma);
     return await contract.balanceOf(address);
@@ -229,7 +229,7 @@ async getReceipt(hash) {
 }
 ```
 
-Don't forget to export our class so it can be references from other modules. At the end of the file add
+Don't forget to export our class so it can be referenced from other modules. At the end of the file add
 ```javascript
 module.exports = RPC;
 ```
@@ -244,7 +244,7 @@ Require necessary modules first
 const ethers = require('ethers');
 const leapCore = require('leap-core');
 const RPC = require('../universal/rpc');
-const { RPC_URL, TOKEN_ADDRESS } = require('../universal/config');
+const { RPC_URL } = require('../universal/config');
 ```
 Remember we've compiled IERC20 together with our contract? Now it's time to use it.  
 Add following lines to the file:

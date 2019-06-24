@@ -20,7 +20,7 @@ module.exports = {
 
 Game Logic
 ---
-Next create `index.js` file. It will hold all our game logic - creating new round, generating and deploying new contract
+Next, still inside the `game` folder, inside create `index.js` file. It will hold all our game logic - creating new round, generating and deploying new contract
 and supplying front-end with round results. Inside of `index.js` file require necessary modules:
 ```javascript
 // This will be used to generate sets of words for each round
@@ -70,7 +70,7 @@ const generateNewRound = async (
 Next prepare round data
 
 ```javascript
-// We gonna use timestamp for a nounce
+// We gonna use timestamp for a nonce
 const time = new Date().getTime().toString();
 // And store it inside contract in bytes32 form
 const roundId = utils.formatBytes32String(time);
@@ -104,7 +104,7 @@ To deploy contract(spending condition) we need to fund the address/hash we've go
 ```javascript
 // Fund round condition
 // Please note, that currently funding transaction need to be paid in LEAP
-// set any number here we can get proper value here later
+// Set any number here. We can get a proper value later
 const gasFee = 6000000;
 
 // Make transaction to fund gas cost
@@ -221,6 +221,7 @@ const inputs = [
     prevout: utxos[2].outpoint
   })
 ];
+
 // Outputs can be empty at this point. We will update them after we check
 // our spending condition for errors
 const outputs = [];
@@ -234,7 +235,7 @@ const msgData = wordGameABI.functions.roundResult.encode([
   roundId
 ]);
 
-// Not that we are setting both script and msgData on first input
+// Note that we are setting both script and msgData on first input
 unlockTransaction.inputs[0].setMsgData(msgData);
 unlockTransaction.signAll(housePrivateKey);
 ```
@@ -244,11 +245,12 @@ actually execute spending condition.
 const checkUnlockTransaction = await checkCondition(unlockTransaction);
 showLog(checkUnlockTransaction, "Condition Check Result");
 
-// If you set wrong message or mess up your contract code  you will get error
+// If you set wrong message or mess up your contract code you will get an error
 if (!checkUnlockTransaction.outputs) {
   showLog("Spending condition code or message data is wrong", "", "***");
   process.exit(1);
 }
+
 // In other case checkUnlockTransaction will have correct outputs
 // We will use those to update our spending condition
 for (let i = 0; i < checkUnlockTransaction.outputs.length; i++) {
@@ -256,6 +258,7 @@ for (let i = 0; i < checkUnlockTransaction.outputs.length; i++) {
     checkUnlockTransaction.outputs[i]
   );
 }
+
 // ...and check it one more time
 const checkUnlockingScriptNew = await checkCondition(unlockTransaction);
 showLog(checkUnlockingScriptNew, "New Check");
