@@ -20,7 +20,7 @@ module.exports = {
 
 Game Logic
 ---
-Next, still inside the `game` folder, inside create `index.js` file. It will hold all our game logic - creating new round, generating and deploying new contract
+Next, still inside the `game` folder, create a file named `index.js`. It will hold all our game logic - creating new round, generating and deploying new contract
 and supplying front-end with round results. Inside of `index.js` file require necessary modules:
 ```javascript
 // This will be used to generate sets of words for each round
