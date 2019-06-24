@@ -69,7 +69,7 @@ async function main() {
   const tokenContract = await getTokenContract(TOKEN_ADDRESS);
   const tokenColor = await getTokenColor(TOKEN_ADDRESS);
 
-  // Get carried function to check token balance
+  // Get curried function to check token balance
   const balanceOf = getBalance(TOKEN_ADDRESS);
 
   // Restore house wallet from mnemonic and get private key and address

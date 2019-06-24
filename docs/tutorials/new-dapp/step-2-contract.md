@@ -58,7 +58,7 @@ function cancelRound() public {
 	token.transfer(HOUSE, balance);
 }
 ```
-> Full listing [WodGame.sol](https://github.com/MaxStalker/leap-word-game/blob/master/server/contracts/WordGame.sol) 
+> Full listing [WordGame.sol](https://github.com/MaxStalker/leap-word-game/blob/master/server/contracts/WordGame.sol) 
 
 Compile Contract
 ---

@@ -40,11 +40,11 @@ const wallet = require("../wallet");
 const { generateNewRound, finishRound } = require("../game");
 
 // For the sake of simplicity we will store active rounds inside memory
-// Please not that all data will be wiped out, when server is restarted.
-// Don't hesitate to update this to DB solution - Redis, for example
+// Please note that all data will be wiped out, when server is restarted.
+// Don't hesitate to update this to a DB solution - Redis, for example.
 const rounds = {};
 
-// We will hardcode round bet size, but it can be easily added to a list
+// We will hardcode the round bet size, but it can be easily added to a list
 // of params we get from POST request
 const ROUND_BET = 100000000;
 ```
@@ -136,9 +136,9 @@ Press "Send" and you should get response similar to this
 	]
 }
 ```
-In order to ensure that finishRound endpoint is working, we need to make transfer from client.
+In order to ensure that finishRound endpoint is working, we need to make a transfer from the client.
 Go to [https://staging.leapdao.org/wallet](https://staging.leapdao.org/wallet), activate and connect Metamask.
-Then ensure you are on Rinkby network and make transfer of any amount to roundAddress that you got from calling startRound.
+Then ensure you are on Rinkeby network and make a transfer of any amount to roundAddress that you got from calling startRound.
 
 
 Do the same to check finishRound endpoint:
@@ -155,4 +155,4 @@ After you press "Send" the response would be similar to this:
 	"roundBalance": "10000106000000"
 }
 ```
-Seems that everything is working just fine and we can proceed implementing our front-end client.
+It seems that everything is working just fine and we can proceed implementing our front-end client.
