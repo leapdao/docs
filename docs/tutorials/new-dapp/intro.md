@@ -4,7 +4,7 @@ Foreword
 
 In this multistep tutorial we will create full stack application called **"Plasma Word Game"**  
 Back-end will utilize Express to quickly scaffold our server and will allow us to create and deploy spending conditions. 
-Front-end will use Parcel to bundle our code and some simple vanilla Javascript to handle "rouing" and logic. 
+Front-end will use Parcel to bundle our code and some simple vanilla Javascript to handle "routing" and logic. 
 We decided to go this way to be somewhat "framework agnostic" and focus on essentials, which can be later translated into
 framework-specific code.
 
