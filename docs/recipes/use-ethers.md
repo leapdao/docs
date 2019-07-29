@@ -15,7 +15,7 @@ const leapProvider = new LeapProvider('https://testnet-node.leapdao.org');
 
 Create a Wallet or connect to existing one. This will allow you to send transactions:
 
- ```js
+```js
 const LeapProvider = require('leap-provider');
 const leapProvider = new LeapProvider('https://testnet-node.leapdao.org');
 
