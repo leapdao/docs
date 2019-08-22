@@ -7,6 +7,14 @@ nav:
   - 'Spending Conditions': spending-conditions.md
   - 'Deploying Spending Conditions': spending-conditions-tutorial.md
   - 'Connect to testnet': connect.md
+  - 'leap-core':
+    - 'Introduction': leap-core/index.md
+    - 'Type': leap-core/types.md
+    - 'Outpoint': leap-core/outpoint.md
+    - 'Input': leap-core/input.md
+    - 'Output': leap-core/output.md
+    - 'Tx': leap-core/transaction.md
+    - 'helpers': leap-core/helpers.md
   - 'JSON RPC':
     - 'Overview': json-rpc/overview.md
     - 'web3.eth': json-rpc/web3.eth.md
