@@ -304,3 +304,59 @@ Response
 
 }
 ```
+
+# plasma_getPeriodByBlockHeight
+
+Return a period data for a block at a given height.
+
+**Parameters**
+
+- `Quantity` | `Tag` - integer of a block number, or the string `'latest'`.
+
+```js
+params: [42]
+```
+
+**Returns**
+
+- `Object`
+    - `validatorAddress`: `Address` - address of the validator which submitted the period
+    - `slotId`: `Number` - slot of the validator which submitted the period
+    - `casBitmap`: `Hex` - CAS bitmap, a 256 bits number. If validator at slot X has voted for the period, the bitmap will have bit X set.
+    - `periodStart`: `Number` - first block in the period
+    - `periodEnd`: `Number` - last block in the period
+
+**Example**
+
+Request
+
+```js
+{
+  "method": "plasma_getPeriodByBlockHeight",
+  "params": [16],
+  "id": 1,
+  "jsonrpc": "2.0"
+}
+```
+
+```bash
+curl --data '{"method":"plasma_getPeriodByBlockHeight","params":[16],"id":1,"jsonrpc":"2.0"}' -H "Content-Type: application/json" -X POST localhost:8645
+```
+
+Response
+
+```js
+{
+    "jsonrpc": "2.0",
+    "id": 1,
+    "result": [
+        {
+            "periodStart": 0,
+            "periodEnd": 31,
+            "casBitmap": "0x0000000000000000000000000000000000000000000000000000000000000000",
+            "slotId": "0",
+            "validatorAddress": "0x916C151A59716EF7DDf17249450cE035b4359313"
+        }
+    ]
+}
+```
