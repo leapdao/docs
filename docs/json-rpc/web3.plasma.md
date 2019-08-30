@@ -4,14 +4,15 @@ title: "Leap web3 extension"
 
 # plasma_unspent
 
-Returns the list of UTXOs for a given address.
+Returns the list of UTXOs optionally filtered by address and/or color.
 
 **Parameters**
 
-`Address` - 20 Bytes - address to get UTXOs for.
+- `address` - 20 Bytes - (Optional) address to get UTXOs for.
+- `colorOrAddress` - `Number` - token address or token color.
 
 ```js
-params: ["0x407d73d8a49eeb85d32cf465507dd71d507100c1"]
+params: ["0x407d73d8a49eeb85d32cf465507dd71d507100c1", 1]
 ```
 
 **Returns**
@@ -29,14 +30,14 @@ Request
 ```js
 {
   "method": "plasma_unspent",
-  "params": ["0x407d73d8a49eeb85d32cf465507dd71d507100c1"],
+  "params": ["0x407d73d8a49eeb85d32cf465507dd71d507100c1", 1],
   "id": 1,
   "jsonrpc": "2.0"
 }
 ```
 
 ```bash
-curl --data '{"method":"plasma_unspent","params":["0x407d73d8a49eeb85d32cf465507dd71d507100c1"],"id":1,"jsonrpc":"2.0"}' -H "Content-Type: application/json" -X POST localhost:8645
+curl --data '{"method":"plasma_unspent","params":["0x407d73d8a49eeb85d32cf465507dd71d507100c1", 1],"id":1,"jsonrpc":"2.0"}' -H "Content-Type: application/json" -X POST localhost:8645
 ```
 
 Response
@@ -251,7 +252,7 @@ Return a tranfer transaction without signature.
 
 - `from` - 20 Bytes - address from which token will be transfered.
 - `to` - 20 Bytes - address token will be transfered to.
-- `color` - `Number` - token id.
+- `colorOrAddress` - `String|Number` - token address or token color.
 - `value` - `Number` - number of token to be transfered
 
 ```js
