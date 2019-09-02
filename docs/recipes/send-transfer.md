@@ -11,7 +11,7 @@ title: Send a transfer transaction
 
 2. Read UTXOs list
 
-        const utxo = await web3.getUnspent(accountAddr);
+        const utxo = await web3.getUnspent(accountAddr, colorOrTokenAddress);
 
 3. Use `leap-core` helpers to build inputs
 
