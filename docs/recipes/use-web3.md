@@ -19,18 +19,24 @@ const web3 = helpers.extendWeb3(new Web3('https://testnet-node.leapdao.org'));
 # Get registered tokens
 
 ```es6
+// get all the registered tokens
+web3.getColors().then(allTokens => {
+  console.log(allTokens);
+});
+// returns { erc20: Array<string>, erc721: Array<String>, erc1948: Array<String }
+
 // reads an array of registered erc20 tokens
-web3.getColors(false).then(erc20Tokens => {
+web3.getColors('erc20').then(erc20Tokens => {
   console.log(erc20Tokens);
 });
 
 // reads array of registered erc721 tokens
-web3.getColors(true).then(erc721Tokens => {
+web3.getColors('erc721').then(erc721Tokens => {
   console.log(erc721Tokens);
 });
 
 // reads array of registered erc1948/NST tokens
-web3.getColors(true).then(erc721Tokens => {
+web3.getColors('erc1948').then(erc721Tokens => {
   console.log(erc721Tokens);
 });
 ```

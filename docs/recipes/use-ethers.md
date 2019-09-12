@@ -57,6 +57,32 @@ console.log(receipt);
 const balance = await leapProvider.getBalance(wallet.address).then(res => Number(res));
 ```
 
+# Get registered tokens
+
+```es6
+// get all the registered tokens
+leapProvider.getColors().then(allTokens => {
+  console.log(allTokens);
+});
+// returns { erc20: Array<string>, erc721: Array<String>, erc1948: Array<String }
+
+// reads an array of registered erc20 tokens
+leapProvider.getColors('erc20').then(erc20Tokens => {
+  console.log(erc20Tokens);
+});
+
+// reads array of registered erc721 tokens
+leapProvider.getColors('erc721').then(erc721Tokens => {
+  console.log(erc721Tokens);
+});
+
+// reads array of registered erc1948/NST tokens
+leapProvider.getColors('erc1948').then(erc721Tokens => {
+  console.log(erc721Tokens);
+});
+```
+
+
 # Get token balance
 
 ```js
