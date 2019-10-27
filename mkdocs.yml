@@ -13,6 +13,7 @@ nav:
     - 'web3.net': json-rpc/web3.net.md
     - 'Leap web3 extension': json-rpc/web3.plasma.md
   - 'Recipes':
+    - 'Plasma Bridge': 'recipes/bridge.md'
     - 'Use Web3': 'recipes/use-web3.md'
     - 'Use Ethers.js': 'recipes/use-ethers.md'
     - 'Use your own token': 'recipes/own-token.md'
