@@ -13,7 +13,7 @@ For deposits and exits you will be interacting with ExitHandler contract. You ca
 
 ## Deposit
 
-Technically, deposit is done by locking root chain tokens in a Plasma Bridge contract. Once your tokens are in a Plasma Bridge, Leap Network node will create a Deposit transaction which will "mint" you a corresponding amount of the same tokens on plasma.
+Technically, a deposit is done by locking root chain tokens in a Plasma Bridge contract. Once your tokens are in a Plasma Bridge, Leap Network node will create a Deposit transaction which will "mint" you a corresponding amount of the same tokens on plasma.
 
 To deposit tokens you need:
 
