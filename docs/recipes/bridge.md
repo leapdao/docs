@@ -34,4 +34,4 @@ The call is tricky. You will need to supply:
 
 Once succeed, your exit is registered. You will get your tokens on the root chain in a 7 days as per normal Plasma procedure.
 
-⚠️IMPORTANT: make sure your dapp is not using exited UTXO after you've submitted your exit. There is a certain delay between the on-chain `startExit` transaction and Exit transaction on plasma. If you spend exited transaction before Exit tx on plasma is created, your exit becomes invalid and may be challenged by anyone.
+⚠️IMPORTANT: make sure your dapp is not using exited UTXO after you've submitted your exit. There is a certain delay between the on-chain `startExit` transaction and Exit transaction on plasma. If you spend the exited transaction before the Exit tx on plasma is created, your exit becomes invalid and may be challenged by anyone.
