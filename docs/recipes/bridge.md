@@ -24,7 +24,7 @@ To deposit tokens you need:
 
 ## Exit
 
-To exit your tokens back to the root chain you need to call `startExit` function of the ExitHandler contract.
+To exit your tokens back to the root chain you need to call the `startExit` function of the ExitHandler contract.
 
 The call is tricky. You will need to supply:
 
