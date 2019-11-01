@@ -18,7 +18,7 @@ Technically, a deposit is done by locking root chain tokens in a Plasma Bridge c
 To deposit tokens you need:
 
 1. Make sure the token you want to deposit is [registered](own-token.md) on the network
-2. Approve the required amount of token to be pulled from your account by ExitHandler contract. That's a normal ERC20's `approve` transaction.
+2. Approve the required amount of tokens to be pulled from your account by the ExitHandler contract. That's a normal ERC20's `approve` transaction.
 3. Call `depositBySender` function of the ExitHandler contract.
 4. In a few root chain blocks you deposit will be available on Plasma
 
