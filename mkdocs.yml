@@ -3,32 +3,37 @@ theme: readthedocs
 
 nav:
   - 'Home': index.md
-  - 'How to use': how-to-use.md
-  - 'Spending Conditions': spending-conditions.md
-  - 'Deploying Spending Conditions': spending-conditions-tutorial.md
-  - 'Connect to testnet': connect.md
-  - 'JSON RPC':
-    - 'Overview': json-rpc/overview.md
-    - 'web3.eth': json-rpc/web3.eth.md
-    - 'web3.net': json-rpc/web3.net.md
-    - 'Leap web3 extension': json-rpc/web3.plasma.md
-  - 'Recipes':
-    - 'Use Web3': 'recipes/use-web3.md'
-    - 'Use Ethers.js': 'recipes/use-ethers.md'
-    - 'Use your own token': 'recipes/own-token.md'
-    - 'Transfer tokens': 'recipes/send-transfer.md'
-  - 'Advanced':
-    - 'Data structures': data-structures.md
-  - 'Create New Leap DApp':
-      - 'Introduction':   'tutorials/new-dapp/intro.md'
-      - 'Setup Server': 'tutorials/new-dapp/step-1-server.md'
-      - 'Create Game Contract': 'tutorials/new-dapp/step-2-contract.md'
-      - 'RPC Utility Methods': 'tutorials/new-dapp/step-3-rpc.md'
-      - 'Generic Utility Methods': 'tutorials/new-dapp/step-4-generic-utility.md'
-      - 'Game Methods': 'tutorials/new-dapp/step-5-game-setup.md'
-      - 'Mock Game Execution': 'tutorials/new-dapp/step-6-game-mock.md'
-      - 'Finish Server': 'tutorials/new-dapp/step-7-finish-server.md'
-      - 'Client Setup': 'tutorials/new-dapp/step-8-client-setup.md'
-      - 'Client Game': 'tutorials/new-dapp/step-9-client-game.md'
-      - 'Run Game': 'tutorials/new-dapp/step-10-run-the-game.md'
-      - 'Final - Source Code': 'tutorials/new-dapp/step-11-final.md'
+  - 'Leap Node':
+    - 'How to use': how-to-use.md
+    - 'Connect to testnet': connect.md
+  - 'Validators':
+    - 'Introduction': validators/general.md
+    - 'Testnet': validators/testnet.md
+    - 'Economics': validators/economics.md
+    - 'Becoming a Validator': validators/instructions.md
+  - 'Dapp Development':
+    - 'JSON RPC':
+      - 'Overview': json-rpc/overview.md
+      - 'web3.eth': json-rpc/web3.eth.md
+      - 'web3.net': json-rpc/web3.net.md
+      - 'Leap web3 extension': json-rpc/web3.plasma.md
+    - 'Spending Conditions': spending-conditions.md
+    - 'Deploying Spending Conditions': spending-conditions-tutorial.md
+    - 'Recipes':
+      - 'Use Web3': 'recipes/use-web3.md'
+      - 'Use Ethers.js': 'recipes/use-ethers.md'
+      - 'Use your own token': 'recipes/own-token.md'
+      - 'Transfer tokens': 'recipes/send-transfer.md'
+    - 'Create New Leap DApp':
+        - 'Introduction':   'tutorials/new-dapp/intro.md'
+        - 'Setup Server': 'tutorials/new-dapp/step-1-server.md'
+        - 'Create Game Contract': 'tutorials/new-dapp/step-2-contract.md'
+        - 'RPC Utility Methods': 'tutorials/new-dapp/step-3-rpc.md'
+        - 'Generic Utility Methods': 'tutorials/new-dapp/step-4-generic-utility.md'
+        - 'Game Methods': 'tutorials/new-dapp/step-5-game-setup.md'
+        - 'Mock Game Execution': 'tutorials/new-dapp/step-6-game-mock.md'
+        - 'Finish Server': 'tutorials/new-dapp/step-7-finish-server.md'
+        - 'Client Setup': 'tutorials/new-dapp/step-8-client-setup.md'
+        - 'Client Game': 'tutorials/new-dapp/step-9-client-game.md'
+        - 'Run Game': 'tutorials/new-dapp/step-10-run-the-game.md'
+        - 'Final - Source Code': 'tutorials/new-dapp/step-11-final.md'
