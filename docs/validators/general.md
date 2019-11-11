@@ -1,11 +1,11 @@
 # Introduction
 
-	## How the  Leap Network works - Validator offering 
+	##How the  Leap Network works - Validator offering 
 
 	LeapDAO is a decentralized autonomous organisation behind the Leap Network creating a scalable second layer solution for the Ethereum Blockchain. The Holacracy managed DAO has over 200 members world wide developing and maintaining the Network, to host a various dapp use cases by increasing the capacity of Ethereum as well as widening the scope of possible Dapps in the Ethereum ecosystem.
 
-	> “We develop Plasma Leap, a scaling technology to deliver 
-	> scalability as global public utility to the Ethereum main-net.”
+	>“We develop Plasma Leap, a scaling technology to deliver 
+	>scalability as global public utility to the Ethereum main-net.”
 
 	The Leap Network creates scalability through a plasma layer two solution with proof of stake. Scalability is achieved through the hashing of XXXXX Transactions in one Block with a Block Time of 2 - 4 seconds on the Plasma Chain. Then the maximal amount of 32 Blocks get stamped on the Ethereum main - net every 1 - 2 min. (the Blocktime of Ethereum). This makes it possible to have an awesome scalability with 1000 transactions per second and less than 4 sec. per Transactions. 
 
