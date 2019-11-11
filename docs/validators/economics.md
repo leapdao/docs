@@ -1,4 +1,4 @@
-# The Token economy
+#The Token economy
 
 	> “While fidelity bonds ensure accuracy towards the chain, we need > to create further incentives around data availability and 
 	> discourage halting. By only allowing staking using a token 
