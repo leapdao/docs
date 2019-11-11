@@ -7,7 +7,9 @@ LeapDAO is a decentralized autonomous organisation behind the Leap Network creat
 >“We develop Plasma Leap, a scaling technology to deliver 
 >scalability as global public utility to the Ethereum main-net.”
 
-The Leap Network creates scalability through a plasma layer two solution with proof of stake. Scalability is achieved through the hashing of XXXXX Transactions in one Block with a Block Time of 2 - 4 seconds on the Plasma Chain. Then the maximal amount of 32 Blocks get stamped on the Ethereum main - net every 1 - 2 min. (the Blocktime of Ethereum). This makes it possible to have an awesome scalability with 1000 transactions per second and less than 4 sec. per Transactions. 
+The Leap Network creates scalability through a plasma layer two solution with proof of stake. Scalability is achieved through the hashing of 4000 Transactions in one Block with a Block Time of 2 - 4 seconds on the Plasma Chain. Then the maximal amount of 32 Blocks get stamped on the Ethereum main - net every 1 - 2 min. (the Blocktime of Ethereum). This makes it possible to have an awesome scalability with 1000 transactions per second and less than 4 sec. per Transactions. 
+
+![alt text](https://raw.githubusercontent.com/leapdao/leapdao-docs/3ff8735ecc4c971d84d3ed5a6933231d93578196/img/val-img1.jpg "Logo Title Text 1")
 
 Every Validator earns one Period reward during one Epoch. The length of the one Epoch depends on the amount of Validator slots. The Order is chosen randomly after each Epoch
 
@@ -34,7 +36,6 @@ The Leap Network will be secured by the Staking of Leap tokens through the Valid
 **Inflation Cap** - Maximum yearly grow of total tokens supply assuming every period in a year will receive maximum block reward. 
 
 
-
 # Network Architekture 
 
 ## LeapDAO Proof of Stake
@@ -53,4 +54,5 @@ The Leap Network is currently a single operator plasma and has the goal to becom
 
 3. **Validator OfferinG** - Offering Validators Leap tokens to participate in an continuously ongoing staking auction for a Validator slot. 
 
-{ GRAFIK ROAD MAP - PICTURE JOHBA VALIDATOR CHANNEL }	
+![alt text](https://raw.githubusercontent.com/leapdao/leapdao-docs/3ff8735ecc4c971d84d3ed5a6933231d93578196/img/val-img3.jpg "Logo Title Text 1")
+
