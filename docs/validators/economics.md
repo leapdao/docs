@@ -1,11 +1,14 @@
 #The Token economy
 
-	> “While fidelity bonds ensure accuracy towards the chain, we need > to create further incentives around data availability and 
-	> discourage halting. By only allowing staking using a token 
-	> specific to the Plasma chain, one is able to ensure that there 
-	> is incentive to continue operating, as the value of the token is > derived from the net present discounted value of all future 
-	> returns from staking. Consequently, network failures reduce the > value of the tokens being held and individual actors have heavy > incentive to act in the best interest towards the network' s 
-	> continued operation.”
+	>“While fidelity bonds ensure accuracy towards the chain, we need 
+	>to create further incentives around data availability and 
+	>discourage halting. By only allowing staking using a token 
+	>specific to the Plasma chain, one is able to ensure that there 
+	>is incentive to continue operating, as the value of the token is 
+	>derived from the net present discounted value of all future 
+	>returns from staking. Consequently, network failures reduce the 
+	>value of the tokens being held and individual actors have heavy 
+	>incentive to act in the best interest towards the network's continued operation.”
 
 	[page 37 - plasma.io by Vitalik and Joseph] (https://plasma.io/plasma.pdf)
 
