@@ -8,7 +8,6 @@ nav:
     - 'Connect to testnet': connect.md
   - 'Validators':
     - 'Introduction': validators/general.md
-    - 'Testnet': validators/testnet.md
     - 'Economics': validators/economics.md
     - 'Becoming a Validator': validators/instructions.md
   - 'Dapp Development':

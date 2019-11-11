@@ -37,7 +37,7 @@ Due to proof of Stake the hardware to running a node can be pretty simple. In th
 
 The Operational costs depend on your hardware costs and the transaction costs on the Ethereum mainnet which depending on the ETH price. We created a table with an monthly transaction cost overview. As you can see the monthly costs are anywhere between XXX and XXX depending on the amount of traffic on the chain and the ethereum price. 
 
-![alt text](https://raw.githubusercontent.com/leapdao/leapdao-docs/3ff8735ecc4c971d84d3ed5a6933231d93578196/img/val-img4.jpg "Logo Title Text 1")
+![alt text](/img/val-img4 "Logo Title Text 1")
 
 ## What are the Operational risks ? 
 
