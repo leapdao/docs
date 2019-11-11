@@ -9,7 +9,7 @@ LeapDAO is a decentralized autonomous organisation behind the Leap Network creat
 
 The Leap Network creates scalability through a plasma layer two solution with proof of stake. Scalability is achieved through the hashing of 4000 Transactions in one Block with a Block Time of 2 - 4 seconds on the Plasma Chain. Then the maximal amount of 32 Blocks get stamped on the Ethereum main - net every 1 - 2 min. (the Blocktime of Ethereum). This makes it possible to have an awesome scalability with 1000 transactions per second and less than 4 sec. per Transactions. 
 
-![alt text](/img/val-img1 "Description of the Plasma Network")
+![Plasma Network](/img/val-img1.jpg "Description of the Plasma Network")
 
 Every Validator earns one Period reward during one Epoch. The length of the one Epoch depends on the amount of Validator slots. The Order is chosen randomly after each Epoch
 
@@ -54,5 +54,5 @@ The Leap Network is currently a single operator plasma and has the goal to becom
 
 3. **Validator OfferinG** - Offering Validators Leap tokens to participate in an continuously ongoing staking auction for a Validator slot. 
 
-![alt text](/img/val-img3 "Roadmap")
+![Roadmap](/img/val-img3.jpg "Roadmap")
 
