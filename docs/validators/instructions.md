@@ -4,11 +4,11 @@
 
 To apply for a Validator spot in the Leap Network is pretty easy. You just have to set up a node and guarantee a 24/7 Uptime. We provide you with an easy explanation how you can set up a node. 
 
-[Explenation - Hoe to set up a Node] (#)
+[Explenation - Hoe to set up a Node](#)
 
 After the Setup of the node you have to provide your signer key and the tendermint key and a contact. Fill out this Sign Up form and you can be a part of the slot auction with your Validator.
 
-[ Sign Up - Register as a Validator ] (https://docs.google.com/forms/d/e/1FAIpQLSdQtc5LoEyWkc5-86SOLW3xK8cRNwuByC7SIrA9MdWeAiuBZw/viewform)  
+[Sign Up - Register as a Validator](https://docs.google.com/forms/d/e/1FAIpQLSdQtc5LoEyWkc5-86SOLW3xK8cRNwuByC7SIrA9MdWeAiuBZw/viewform)
 
 If you have problems or question to the Validator application prozess, join the LeapDAO slack and ask you question in the Validator channel or contact XXXXX
 
@@ -42,13 +42,14 @@ The Operational costs depend on your hardware costs and the transaction costs on
 ## What are the Operational risks ? 
 
 We see the following risks to be a validator:
-* Slashing Risk - Submission of invalid blocks / submission of two blocks with the same height.
 
-* Market Risk - Low token market valuation / rising Ether gas prices consume validators’ profits.
+* **Slashing Risk** - Submission of invalid blocks / submission of two blocks with the same height.
 
-* Centralization Risk - The creation of validator cartels is a central critique to the PoS design.
+* **Market Risk** - Low token market valuation / rising Ether gas prices consume validators’ profits.
 
-* Regulatory Risk - Various laws affecting validators and/or users of network.
+* **Centralization Risk** - The creation of validator cartels is a central critique to the PoS design.
+
+* **Regulatory Risk** - Various laws affecting validators and/or users of network.
 
 
 

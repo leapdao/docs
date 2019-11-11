@@ -10,7 +10,7 @@
 >value of the tokens being held and individual actors have heavy 
 >incentive to act in the best interest towards the network's continued operation.”
 
-[page 37 - plasma.io by Vitalik and Joseph] (https://plasma.io/plasma.pdf)
+[page 37 - plasma.io by Vitalik and Joseph](https://plasma.io/plasma.pdf "Plasma paper")
 
 or this reason Leap DAO created a token economy with an Infinite token supply, reflexive Inflation through staked supply and Leap Token burning after transactions.
 	
