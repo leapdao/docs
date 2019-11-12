@@ -11,6 +11,7 @@ nav:
     - 'Token Economics': validators/economics.md
     - 'FAQ': validators/instructions.md
   - 'Dapp Development':
+    - 'Plasma Bridge': 'recipes/bridge.md'
     - 'JSON RPC':
       - 'Overview': json-rpc/overview.md
       - 'web3.eth': json-rpc/web3.eth.md
