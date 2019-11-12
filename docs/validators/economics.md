@@ -12,7 +12,7 @@ For this reason LeapDAO creates a token economy with an infinite token supply, [
 
 When inflating the token supply to pay validators, value is redistributed from all participants to the validators. How can this redistribution be minimized while still paying enough to keep the chain secure?
 
-![Token economy](/img/val-img2.jpg "Token economy")
+![Token economy](/img/val-img2.svg "Token economy")
 
 At the launch of the network the inflation will be relatively high (inflation cap). It is assumed that validators will keep accumulating and staking tokens for future returns. Once the total amount of tokens staked exceeds 50% of supply, the block-rewards start decreasing. Block-rewards continue decreasing until first validators are finding the validation not worth their while and unstake from the chain. Somewhere in the right half of the graph a market equilibrium is found where only the efficient validators can make a profit.
 
