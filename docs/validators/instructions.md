@@ -43,7 +43,7 @@ Due to Proof-of-Stake the hardware requirements for running a node are low. In t
 
 The operational costs depend on your hardware costs and the transaction costs on the Ethereum network which depend on the Ether price. We created a table with a monthly transaction cost overview.
 
-![Operator costs](/img/val-img4.jpg "Overview monthly costs per slot")
+![Operator costs](/img/val-img4.svg "Overview monthly costs per slot")
 
 As you can see the monthly costs are anywhere between USD 7 and USD 750 depending on the Ether price. The amount of traffic on the chain can further affect the cost.
 

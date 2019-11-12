@@ -3,7 +3,7 @@
 
 Scalability is achieved through the hashing of up to 4000 transactions in one block with a block time of 2 - 4 seconds on the Plasma chain. Then 32 Plasma-blocks get "anchored" on the Ethereum network every 1 - 2 min as Periods. The compression of many transactions into a single hash which gets submitted to the root chain enables the described scalability.
 
-![Plasma Network](/img/val-img1.jpg "Description of the Plasma Network")
+![Plasma Network](/img/val-img1.svg "Description of the Plasma Network")
 
 Every Validator earns one Period reward during one Epoch. The length of the one Epoch depends on the number of Validator slots. The Order is chosen randomly after each Epoch.
 
@@ -21,7 +21,7 @@ The Leap Network will be secured by the Staking of Leap tokens through the Valid
 
 **Slashing** - A penalty for validators if invalid blocks are committed or the validator is offline.
 
-**Epoch** - A period of x blocks on the Plasma chain. After each epoch slots can change ownership and the tax rate is increased or decreased. Per epoch, each slot will become a slot leader at least once.
+**Epoch** - A interval of x blocks on the Plasma chain. After each epoch slots can change ownership and the tax rate is increased or decreased. Per epoch each slot will become a slot leader at least once.
 
 **Slot** - A slot represents the right to propose a block at least once in each Epoch. Slots are constantly auctioned to the highest bidder.
 
@@ -45,7 +45,7 @@ When a Validator has a slot they have to stay online and submit one period per e
 
 The Leap Network currently operates in a single-operator setup and has the goal to become a token-staked multi-operator network. For a smooth transition of the network, a 3-steps roadmap has been proposed:
 
-![Roadmap](/img/val-img3.jpg "Roadmap")
+![Roadmap](/img/val-img3.svg "Roadmap")
 
 1. **Testnet - Stage 1** - Incentivisation of new testnet validator through bounties.
 
