@@ -11,25 +11,25 @@ The Leap Network will be secured by the Staking of Leap tokens through the Valid
 
 ## Glossary
 
-**LEAP** - The token used for staking the Plasma Chain. LEAP also pay the transaction fees on the Plasma chain and reward validators for proposing new blocks.
+**LEAP** - The token used for staking the Plasma Chain. LEAP also pay the transaction fees on the Plasma chain and reward validators for proposing new periods.
 
-**Stake** - An amount of LEAP token locked in the Plasma contract for a specific slot. The stake is used as a collateral to vouch for the correctness of submitted block.
+**Stake** - An amount of LEAP token locked in the Plasma contract for a specific slot. The stake is used as a collateral to vouch for the correctness of submitted blocks. When a validator empties a slot the stake is returned.
 
-**Validator Node** - A software that can be downloaded and run to interact with the Plasma chain. Validator nodes participate in the consensus protocol by submitting block headers to the Plasma contract on the Ethereum network. 
+**Validator Node** - A software that can be downloaded and run to interact with the Plasma chain. Validator nodes participate in the consensus protocol by submitting period headers to the Plasma contract on the Ethereum network. 
 
 **Validators** - Individuals and organizations operating nodes and having stakes.
 
-**Slashing** - A penalty for validators if invalid blocks are committed.
+**Slashing** - A penalty for validators if invalid blocks are committed or the validator is offline.
 
 **Epoch** - A period of x blocks on the Plasma chain. After each epoch slots can change ownership and the tax rate is increased or decreased. Per epoch each slot will become a slot leader at least once.
 
 **Slot** - A slot represents the right to propose a block at least once in each Epoch. Slots are constantly auctioned to the highest bidder. 
 
-**Block Reward** - Is a set of newly minted tokens that the validator includes as a coinbase transactions in the block that it proposes. The reward decreases according to the reduction schedule.
+**Period Reward** - Is a set of newly minted tokens that the validator receives as a reward for submitting a period. The reward is adjusted by the network depending on the RISS model.
 
-**Tax** - A fee which is charged on the stake for each EPOCH. The tax depends on the collective performance of the validators.
+**Tax** - A fee which is charged on the period reward. The tax is a governance parameter of the network and is determined through token governance.
 
-**Inflation Cap** - Maximum yearly grow of total tokens supply assuming every period in a year will receive maximum block reward. 
+**Inflation Cap** - Maximum yearly grow of total tokens supply.
 
 ## Proof of Stake
 
