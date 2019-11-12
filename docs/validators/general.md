@@ -1,21 +1,17 @@
-# Introduction
 
-## How the  Leap Network works - Validator offering 
+## Network Scalability
 
-LeapDAO is a decentralized autonomous organisation behind the Leap Network creating a scalable second layer solution for the Ethereum Blockchain. The Holacracy managed DAO has over 200 members world wide developing and maintaining the Network, to host a various dapp use cases by increasing the capacity of Ethereum as well as widening the scope of possible Dapps in the Ethereum ecosystem.
-
->“We develop Plasma Leap, a scaling technology to deliver 
->scalability as global public utility to the Ethereum main-net.”
-
-The Leap Network creates scalability through a plasma layer two solution with proof of stake. Scalability is achieved through the hashing of 4000 Transactions in one Block with a Block Time of 2 - 4 seconds on the Plasma Chain. Then the maximal amount of 32 Blocks get stamped on the Ethereum main - net every 1 - 2 min. (the Blocktime of Ethereum). This makes it possible to have an awesome scalability with 1000 transactions per second and less than 4 sec. per Transactions. 
+Scalability is achieved through the hashing of up to 4000 transactions in one block with a block time of 2 - 4 seconds on the Plasma chain. Then 32 Plasma-blocks get "anchored" on the Ethereum network every 1 - 2 min as Periods. The compression of many transactions into a single hash which get's submitted to the root chain enables the described scalability.
 
 ![Plasma Network](/img/val-img1.jpg "Description of the Plasma Network")
 
-Every Validator earns one Period reward during one Epoch. The length of the one Epoch depends on the amount of Validator slots. The Order is chosen randomly after each Epoch
+Every Validator earns one Period reward during one Epoch. The length of the one Epoch depends on the amount of Validator slots. The Order is chosen randomly after each Epoch.
 
 The Leap Network will be secured by the Staking of Leap tokens through the Validators. To understand the Leap Network Architecture we will explain some of the key components of the economic design. 
 
-**LEAP** - The token used for staking the Plasma Chain. LEAP also pay the transaction fees on the Plasma chain and reward validators for validating (proposing new blocks).
+## Glossary
+
+**LEAP** - The token used for staking the Plasma Chain. LEAP also pay the transaction fees on the Plasma chain and reward validators for proposing new blocks.
 
 **Stake** - An amount of LEAP token locked in the Plasma contract for a specific slot. The stake is used as a collateral to vouch for the correctness of submitted block.
 
@@ -35,24 +31,26 @@ The Leap Network will be secured by the Staking of Leap tokens through the Valid
 
 **Inflation Cap** - Maximum yearly grow of total tokens supply assuming every period in a year will receive maximum block reward. 
 
+## Proof of Stake
 
-# Network Architekture 
+The staking validators in the Leap Network have to secure their validator spot through a slot auction. This means they bet on a empty slot with Leap token to become the validator of this slot. When a validator owns a slot it is designated as active and can submit periods to the network.
 
-## LeapDAO Proof of Stake
+A Validator keeps a slot as long as it's stake isn't outbit by another validator. When outbidding occruns the slot status changes to auctioned. Both validator can continue betting on the slot for one epoch, after which the validator with the highest bet is activated. Validators are likely to be outbid when their stake is slashed.
 
-The staking Validators in the Leap Network have to secure their Validator spot through a Slot Auction. This means they bet on a empty Slot with Leap token to become the Validator of this slot. When a Validator owns a Slot it is designated as active. A Validator keeps that Slot as long as he doesn’t get slashed, which means he makes a mistake like haven’t been online, used a old software or hasn’t enough ETH to pay the transaction fee. The second possible case to los the Slot is when another Validator is betting on this Slot. When it happens the Slot status changes to Auctioned, which means both Validator betting on the Slot till the highest bet wins. This staking of Leap tokens guarantees that the best Validators run the system which leads to a secure and fast network. It also solves the “nothing-at-stake” problem due to the fact that multiple staking becomes very expensive for an Validator
+Slashing happens when validators make a mistake like not beeing online, use an outdated software or don't maintain enough ETH to pay the transaction fee. This staking of Leap tokens guarantees that slots are allocated to the most suited validators, resulting in a secure and fast network.
 
-When a Validator has a Slot they have to stay online and submit per epoch one Block. The order of the Block submission is chosen randomly every epoch. After the submission of a Block the Validator get their reward.
+When a Validator has a slot they have to stay online and submit one period per epoch. The order of the period submission is chosen randomly every epoch. After the submission of multiple epochs a validator can request payout for period rewards.
 
-# Leap Network Roadmap 
+## Leap Network Roadmap 
 
-The Leap Network is currently a single operator plasma and has the goal to become a Token staked Plasma chain. For a smooth transition of the Leap Network, our community created a road map to grow out of the single operator plasma to a multi operator plasma in the test net and end in the token staked live net. The Roadmap has 3 Milestones:
-
-1. **Subsidy (DAI)** - Incentivisation of team members and bounty hunters through bounties to launch a Validator.
-
-2. **Game of Stake** - An Staking game to secure a Validator Spot on the testnet 
-
-3. **Validator OfferinG** - Offering Validators Leap tokens to participate in an continuously ongoing staking auction for a Validator slot. 
+The Leap Network currently operates in a single-operator setup and has the goal to become a token-staked multi-operator network. For a smooth transition of the network, a 3-steps roadmap has been proposed:
 
 ![Roadmap](/img/val-img3.jpg "Roadmap")
+
+1. **Testnet - Stage 1** - Incentivisation of new testnet validator through bounties.
+
+2. **Testnet - Stage 2** - A period of gamified rewards to educate validators and compete on the testnet.
+
+3. **Mainnet - Launch** - The best validators of the testnet receive genesis slots on the token-staked multi-operator network running on the mainnet.
+
 

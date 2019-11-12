@@ -7,9 +7,9 @@ nav:
     - 'How to use': how-to-use.md
     - 'Connect to testnet': connect.md
   - 'Validators':
-    - 'Introduction': validators/general.md
-    - 'Economics': validators/economics.md
-    - 'Becoming a Validator': validators/instructions.md
+    - 'Leap Network Introduction': validators/general.md
+    - 'Token Economics': validators/economics.md
+    - 'FAQ': validators/instructions.md
   - 'Dapp Development':
     - 'JSON RPC':
       - 'Overview': json-rpc/overview.md

@@ -1,12 +1,18 @@
-# Becoming a Validator 
+# FAQ
+
+This section answers commons questions for new validators.
 
 ## Where to get started ?
 
-To apply for a Validator spot in the Leap Network is pretty easy. You just have to set up a node and guarantee a 24/7 Uptime. We provide you with an easy explanation how you can set up a node. 
+To apply for a validator slot in the Leap Network you need to:
+1. set up a node and
+2. guarantee a 24/7 Uptime
+
+We provide you with an explanation on how to set up a node here:
 
 [Explenation - Hoe to set up a Node](#)
 
-After the Setup of the node you have to provide your signer key and the tendermint key and a contact. Fill out this Sign Up form and you can be a part of the slot auction with your Validator.
+After the setup of the node you have to provide your validator address, validator Id and contact email. Fill out the sign-up form and you can be a part of the slot auction with your Validator.
 
 [Sign Up - Register as a Validator](https://docs.google.com/forms/d/e/1FAIpQLSdQtc5LoEyWkc5-86SOLW3xK8cRNwuByC7SIrA9MdWeAiuBZw/viewform)
 
