@@ -1,3 +1,5 @@
+## Set up a node
+
 To connect to the network with your own node, run through the followings steps.
 
 **Prerequisite:**
@@ -79,23 +81,41 @@ Use `config.json` as parameter in the following command:
 
 **3. Sync the Network**
 
-Let node run and download all the blocks till the current tip of the chain. You can read the current blockheight from the [testnet block explorer](https://testnet.leapdao.org/explorer).
+Let node run and download all the blocks till the current tip of the chain. You can read the current block height from the [testnet block explorer](https://testnet.leapdao.org/explorer).
 
 ## Becoming a Validator
 
-To become a validator, walk through the following steps:
+If a note launches for the first time, it automatically generates a validator key-pair. Once the node syncs with the tip of the chain successfully, it will check the validators slots, and compare the registered addresses with its own. If the node is not an active validator, it will display the `validator address` and `validator ID` as follows:
 
-**1. Copy**
+![Validator Console](/img/validatorTerminal.png "values to copy from console")
+
+
+**1. Fund your validator address with Ether**
+
+To be able to propose periods and receive rewards, validators need to submit transactions to the root network (Ethereum). In order to be able to pay the gas for period proposals, fund the `validator address` with Rinkeby Ether:
+
+![Address on Validator Console](/img/validatorTerm.png "address to copy from console")
+
+If you do not have Rinkeby Ether, you can try the following faucets to receive some:
+
+- [rinkeby.io](https://www.rinkeby.io/#faucet)
+- [faucet.metamask.io](https://faucet.metamask.io/)
+
+
+**2. Apply as a validator**
+
+You need to provide us your `validator address` and `validator ID` to get assigned to a validator slot. We also need your email address to inform you about the start of your validator.
+
+
+[Fill the registration form](https://docs.google.com/forms/d/e/1FAIpQLSdQtc5LoEyWkc5-86SOLW3xK8cRNwuByC7SIrA9MdWeAiuBZw/viewform) by copying the following data:
+
+```
 Validator address: 0x...
 Validator ID: 0x...
+```
 
-**2. Fund the address**
+**3. Let the node run and join our Slack community**
 
-fund the address with Ether
+[Join our Slack community](http://join.leapdao.org/) to get in touch with us and stay up to date about new releases & our validator launch on the mainnet.
 
-**3. Request Validator Slot**
-
-Submit data to this form:
-[Google Form](https://docs.google.com/forms/d/e/1FAIpQLSdQtc5LoEyWkc5-86SOLW3xK8cRNwuByC7SIrA9MdWeAiuBZw/viewform)
-
-Let node run and wait for confirmation from LeapDAO. In the meantime you can join our #validator channel on Slack (http://join.leapdao.org/)
+Check out our `#validator` channel on Slack.
