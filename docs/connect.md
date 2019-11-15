@@ -8,7 +8,7 @@ To connect to the network with your own node, run through the followings steps.
 - build-essential
 - Python 2.X (required by node-gyp, only for building)
 - A fully synced [Rinkeby Light node](https://www.rinkeby.io/#geth)
-- start geth with `--rpc --rpcaddr "0.0.0.0" --rpcport "8545"` options, to expose JSON-RPC to lacal plasma node
+- start geth with `--rpc --rpcaddr "0.0.0.0" --rpcport "8545"` options, to expose JSON-RPC to local plasma node.
 
 **1. Install**
 
