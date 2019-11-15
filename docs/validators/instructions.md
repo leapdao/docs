@@ -3,21 +3,10 @@ This section answers commons questions for new validators.
 
 ## Where to get started?
 
-To apply for a validator slot in the Leap Network you need to:
-
-1. set up a node
-2. sync to the top of the network
-3. provide 24/7 uptime
-
 An in-detail explanation of how to set up a node can be found here:
 
-[Explanation - How to set up a Node](#)
+[Explanation - How to set up a Node](/connect/#becoming-a-validator)
 
-After the setup of the node, you have to provide your validator address, validator Id and contact email. Fill out the sign-up form and you can be a part of the slot auction with your Validator.
-
-[Sign Up - Register as a Validator](https://docs.google.com/forms/d/e/1FAIpQLSdQtc5LoEyWkc5-86SOLW3xK8cRNwuByC7SIrA9MdWeAiuBZw/viewform)
-
-If you have problems or question to the Validator application process, join the [LeapDAO slack](http://join.leapdao.org) and ask you question in the Validator channel or contact XXXXX.
 
 ## Do Validators need to be publicly identified?
 

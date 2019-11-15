@@ -2,7 +2,7 @@ site_name: LeapDAO
 theme: readthedocs
 
 nav:
-  - 'Home': index.md
+  - 'Introduction': index.md
   - 'Leap Node':
     - 'How to use': how-to-use.md
     - 'Connect to testnet': connect.md
