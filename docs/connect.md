@@ -86,7 +86,7 @@ Let node run and download all the blocks till the current tip of the chain. You 
 
 ## Becoming a Validator
 
-If a note launches for the first time, it automatically generates a validator key-pair. Once the node syncs with the tip of the chain successfully, it will check the validators slots, and compare the registered addresses with its own. If the node is not an active validator, it will display the `validator address` and `validator ID` as follows:
+If a node launches for the first time, it automatically generates a validator key-pair. Once the node syncs with the tip of the chain successfully, it will check the validators slots, and compare the registered addresses with its own. If the node is not an active validator, it will display the `validator address` and `validator ID` as follows:
 
 ![Validator Console](/img/validatorTerminal.png "values to copy from console")
 
