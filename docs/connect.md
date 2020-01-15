@@ -2,13 +2,26 @@
 
 To connect to the network with your own node, run through the followings steps.
 
+**Hardware Requirements:**
+**64bit** - please check before if your CPU is capable of running Node.js 8+ ([only supported by 64bit CPU](https://github.com/nodejs/build/issues/885) on Ubuntu machines)
+
+
 **Prerequisite:**
 
-- Node.js 8+
-- build-essential
+- Node.js ([Ubuntu / macOS](https://nodejs.org/en/download/) node.js 12+)
+- build-essential (for [Ubuntu](https://askubuntu.com/questions/398489/how-to-install-build-essential))
 - Python 2.X (required by node-gyp, only for building)
-- A fully synced [Rinkeby Light node](https://www.rinkeby.io/#geth)
-- start geth with `--rpc --rpcaddr "0.0.0.0" --rpcport "8545"` options, to expose JSON-RPC to local plasma node.
+  For ubuntu mandatory:  apt-get install python-dev
+- A fully synced [Rinkeby Light node](https://www.rinkeby.io/#geth) (see 0. for more info)
+
+**0. Set up Rinkeby Node**
+
+a) [Install Geth](https://geth.ethereum.org/docs/install-and-build/installing-geth)  
+b) download `rinkeby.json` and save in `$HOME/`  
+c) initialize Geth with `geth --datadir=$HOME/.rinkeby init rinkeby.json`  
+d) start Get with `geth --networkid=4 --datadir=/$HOME/.rinkeby --rpc --rpcaddr "0.0.0.0" --rpcport "8545”`  
+
+For the Full Node to be fully synchronized it takes up to 3 days on HDD and up to 12 hrs on SSD.
 
 **1. Install**
 
@@ -90,6 +103,8 @@ If a node launches for the first time, it automatically generates a validator ke
 
 ![Validator Console](/img/validatorTerminal.png "values to copy from console")
 
+If you can’t find the `validator address` and `validator ID` you can restart the process and get the info. 
+
 
 **1. Fund your validator address with Ether**
 
@@ -119,4 +134,4 @@ Validator ID: 0x...
 
 [Join our Slack community](http://join.leapdao.org/) to get in touch with us and stay up to date about new releases & our validator launch on the mainnet.
 
-Check out our `#validator` channel on Slack.
+Check out our `#validators` channel on Slack.
