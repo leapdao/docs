@@ -11,8 +11,8 @@ To connect to the network with your own node, run through the followings steps.
 
 - Node.js 8+ ([Ubuntu / macOS](https://nodejs.org/en/download/))
 - build-essential (for [Ubuntu](https://askubuntu.com/questions/398489/how-to-install-build-essential))
-- Python 2.X (required by node-gyp, only for building)
-  For ubuntu mandatory:  apt-get install python-dev
+- Python 2.X (required by node-gyp, only for building)  
+For ubuntu mandatory:  `apt-get install python-dev`
 - A fully synced [Rinkeby Light node](https://www.rinkeby.io/#geth) (see 0. for more info)
 
 **0. Set up Rinkeby Node**
@@ -116,22 +116,24 @@ To be able to propose periods and receive rewards, validators need to submit tra
 If you do not have Rinkeby Ether, you can try the following faucets to receive some:
 
 - [rinkeby.io](https://www.rinkeby.io/#faucet)
-- [faucet.metamask.io](https://faucet.metamask.io/)
+- [faucet.metamask.io](https://faucet.metamask.io/)  
+  
+**2. Stake Deposit**  
 
+To apply for a validator slot you'll need to stake `100 DAI` to the LeapDAO Operations Multisig. Once the transaction went through, save the tx hash for the next step.
 
-**2. Apply as a validator**
+**3. Apply as a validator**
 
-You need to provide us your `validator address` and `validator ID` to get assigned to a validator slot. We also need your email address to inform you about the start of your validator.
+You need to provide us your `validator address` and `validator ID` to get assigned to a validator slot. We also need your email address to inform you about the start of your validator and the tx hash of your stake.
 
-
-[Fill the registration form](https://docs.google.com/forms/d/e/1FAIpQLSdQtc5LoEyWkc5-86SOLW3xK8cRNwuByC7SIrA9MdWeAiuBZw/viewform) by copying the following data:
+[Fill the registration form](https://docs.google.com/forms/d/e/1FAIpQLSdQtc5LoEyWkc5-86SOLW3xK8cRNwuByC7SIrA9MdWeAiuBZw/viewform) by copying the following data from your node log:
 
 ```
 Validator address: 0x...
 Validator ID: 0x...
 ```
 
-**3. Let the node run and join our Slack community**
+**4. Let the node run and join our Slack community**
 
 [Join our Slack community](http://join.leapdao.org/) to get in touch with us and stay up to date about new releases & our validator launch on the mainnet.
 
