@@ -2,13 +2,14 @@
 
 To connect to the network with your own node, run through the followings steps.
 
-**Hardware Requirements:**
-**64bit** - please check before if your CPU is capable of running Node.js 8+ ([only supported by 64bit CPU](https://github.com/nodejs/build/issues/885) on Ubuntu machines)
+**Hardware Requirements:**  
+
+- **64bit** - please check before if your CPU is capable of running Node.js 8+ or newer ([only supported by 64bit CPU](https://github.com/nodejs/build/issues/885) on Ubuntu machines)
 
 
 **Prerequisite:**
 
-- Node.js ([Ubuntu / macOS](https://nodejs.org/en/download/) node.js 12+)
+- Node.js 8+ ([Ubuntu / macOS](https://nodejs.org/en/download/))
 - build-essential (for [Ubuntu](https://askubuntu.com/questions/398489/how-to-install-build-essential))
 - Python 2.X (required by node-gyp, only for building)
   For ubuntu mandatory:  apt-get install python-dev
