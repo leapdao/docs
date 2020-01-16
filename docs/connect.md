@@ -120,7 +120,7 @@ If you do not have Rinkeby Ether, you can try the following faucets to receive s
   
 **2. Stake Deposit**  
 
-To apply for a validator slot you'll need to stake `100 DAI` to the LeapDAO Operations Multisig. Once the transaction went through, save the tx hash for the next step.
+To apply for a validator slot you'll need to stake `100 DAI` to the LeapDAO Operations Multisig `0x0876979535552F3feCD38372503d376864D31C1C`. Once the transaction went through, save the tx hash for the next step.
 
 **3. Apply as a validator**
 
