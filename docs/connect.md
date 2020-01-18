@@ -20,7 +20,7 @@ For ubuntu mandatory:  `apt-get install python-dev`
 a) [Install Geth](https://geth.ethereum.org/docs/install-and-build/installing-geth)  
 b) download `rinkeby.json` and save in `$HOME/`  
 c) initialize Geth with `geth --datadir=$HOME/.rinkeby init rinkeby.json`  
-d) start Get with `geth --networkid=4 --datadir=/$HOME/.rinkeby --rpc --rpcaddr "0.0.0.0" --rpcport "8545”`  
+d) start Get with `geth --networkid=4 --datadir=/$HOME/.rinkeby --rpc --rpcaddr "0.0.0.0" --rpcport "8545"`  
 
 For the Full Node to be fully synchronized it takes up to 3 days on HDD and up to 12 hrs on SSD.
 
