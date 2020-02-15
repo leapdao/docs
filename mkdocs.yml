@@ -9,6 +9,7 @@ nav:
   - 'Validators':
     - 'Leap Network Introduction': validators/general.md
     - 'Token Economics': validators/economics.md
+    - 'Operations': validators/operations.md
     - 'FAQ': validators/instructions.md
   - 'Dapp Development':
     - 'Plasma Bridge': 'recipes/bridge.md'
