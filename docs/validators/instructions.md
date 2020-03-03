@@ -17,9 +17,9 @@ As a validator, you don't have to be publicly registered or have a registered bu
 
 As a Validator, you have three main responsibilities to keep your node running:
 
-1. Continuously founding your validator key with Ether to be able to pay the transaction cost on the Ethereum network.
+1. Continuously funding your validator key with Ether to be able to pay the transaction cost on the Ethereum network.
 
-2. Make sure you keep your validator online 24/7. This will prevent slashing of the staked tokens for being offline.
+2. Make sure you keep your validator online 24/7. This will prevent slashing of the staked tokens for being offline. See [Publishing heartbeats](operations.md#publishing-heartbeats)
 
 3. From time to time updates will be released for the node software. Validators have to run the latest versions of the software to provide correct service.
 
